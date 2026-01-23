@@ -1,0 +1,66 @@
+import { Button } from "@/components/ui/button";
+import { JANANI, links } from "@/lib/janani";
+
+export default function Contact() {
+  return (
+    <main>
+      <section className="py-14 md:py-18">
+        <div className="container grid gap-8 md:grid-cols-12">
+          <div className="md:col-span-6">
+            <h1 className="text-4xl md:text-5xl">Contact</h1>
+            <p className="mt-3 text-muted-foreground">Fast enquiry, directions and admissions support.</p>
+
+            <div className="mt-6 rounded-3xl border bg-card p-6 shadow-soft">
+              <div className="text-sm font-semibold">Phone</div>
+              <a className="mt-1 block text-lg text-foreground underline-offset-4 hover:underline" href={links.tel}>
+                {JANANI.phone}
+              </a>
+
+              <div className="mt-4 text-sm font-semibold">Email</div>
+              <a
+                className="mt-1 block text-foreground underline-offset-4 hover:underline"
+                href={`mailto:${JANANI.email}`}
+              >
+                {JANANI.email}
+              </a>
+
+              <div className="mt-4 text-sm font-semibold">Address</div>
+              <p className="mt-1 text-sm text-muted-foreground">{JANANI.addressLine}</p>
+
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Button asChild variant="hero" size="pill">
+                  <a href={links.tel}>Click to Call</a>
+                </Button>
+                <Button asChild variant="soft" size="pill">
+                  <a href={links.whatsapp} target="_blank" rel="noreferrer">
+                    Click to WhatsApp
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="pill">
+                  <a href={links.maps} target="_blank" rel="noreferrer">
+                    Open Maps
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:col-span-6">
+            <div className="overflow-hidden rounded-3xl border bg-card shadow-elevated">
+              <iframe
+                title="Janani Rehabilitation Centre Location"
+                loading="lazy"
+                className="h-[420px] w-full"
+                referrerPolicy="no-referrer-when-downgrade"
+                src={`https://www.google.com/maps?q=${encodeURIComponent(JANANI.addressLine)}&output=embed`}
+              />
+            </div>
+            <p className="mt-3 text-xs text-muted-foreground">
+              If the embedded map is blocked on some devices, use “Open Maps” above.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

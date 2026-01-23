@@ -19,6 +19,14 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        primaryGlow: "hsl(var(--primary-glow))",
+        surface: "hsl(var(--surface))",
+        surface2: "hsl(var(--surface-2))",
+        brand: {
+          teal: "hsl(var(--brand-teal))",
+          tealSoft: "hsl(var(--brand-teal-soft))",
+          slate: "hsl(var(--brand-slate))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -64,6 +72,14 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "float-y": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "fade-up": {
+          "0%": { opacity: "0", transform: "translateY(12px)" },
+          "100%": { opacity: "1", transform: "translateY(0px)" },
+        },
         "accordion-down": {
           from: {
             height: "0",
@@ -82,8 +98,15 @@ export default {
         },
       },
       animation: {
+        "float-y": "float-y 7s ease-in-out infinite",
+        "fade-up": "fade-up 700ms cubic-bezier(0.22, 1, 0.36, 1)",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      boxShadow: {
+        soft: "var(--shadow-soft)",
+        elevated: "var(--shadow-elevated)",
+        glow: "var(--shadow-glow)",
       },
     },
   },
