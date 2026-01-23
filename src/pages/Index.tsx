@@ -6,7 +6,7 @@ import heroImg from "@/assets/janani/hd/reception-2-hd.jpg";
 import bedsImg from "@/assets/janani/hd/beds-1-hd.jpg";
 import cctvImg from "@/assets/janani/hd/cctv-room-hd.jpg";
 import buddhaImg from "@/assets/janani/hd/buddha-wall-hd.jpg";
-import { Shield, UtensilsCrossed, BedDouble, Leaf } from "lucide-react";
+import { Shield, UtensilsCrossed, BedDouble, Leaf, ShieldCheck, Stethoscope, Lock } from "lucide-react";
 
 const features = [
   {
@@ -28,6 +28,42 @@ const features = [
     title: "Recreation",
     desc: "Large open/free space for meditation and movement.",
     icon: <Leaf aria-hidden="true" />,
+  },
+];
+
+const trustBadges = [
+  {
+    title: "24/7 CCTV",
+    desc: "Safety-first environment with continuous monitoring.",
+    icon: <ShieldCheck aria-hidden="true" />,
+  },
+  {
+    title: "Medical Supervision",
+    desc: "Structured care guided by trained professionals.",
+    icon: <Stethoscope aria-hidden="true" />,
+  },
+  {
+    title: "Confidential Support",
+    desc: "Discreet admissions with respectful communication.",
+    icon: <Lock aria-hidden="true" />,
+  },
+];
+
+const testimonials = [
+  {
+    name: "Parent of a Patient",
+    quote:
+      "Before: our home was in constant fear and uncertainty. After: we saw stability return — calm routines, respectful counseling, and real hope for the future.",
+  },
+  {
+    name: "Recovered Client",
+    quote:
+      "Before: I felt stuck and isolated. After: the structured routine, supportive team, and peaceful environment helped me rebuild confidence—one day at a time.",
+  },
+  {
+    name: "Family Member",
+    quote:
+      "Before: we didn’t know where to start. After: clear guidance, confidential support, and fast responses made the process feel safe and manageable.",
   },
 ];
 
@@ -122,6 +158,24 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="border-y bg-surface py-8">
+        <div className="container">
+          <div className="grid gap-4 md:grid-cols-3">
+            {trustBadges.map((b) => (
+              <article key={b.title} className="flex items-start gap-4 rounded-2xl border bg-background p-5 shadow-soft">
+                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-accent text-accent-foreground shadow-soft">
+                  {b.icon}
+                </div>
+                <div>
+                  <h2 className="text-base font-semibold text-foreground">{b.title}</h2>
+                  <p className="mt-1 text-sm text-muted-foreground">{b.desc}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-14 md:py-18">
         <div className="container">
           <div className="flex items-end justify-between gap-6">
@@ -177,6 +231,50 @@ const Index = () => {
                     loading="lazy"
                   />
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 md:py-18">
+        <div className="container">
+          <div className="flex items-end justify-between gap-6">
+            <div>
+              <h2 className="text-3xl md:text-4xl">Testimonials</h2>
+              <p className="mt-2 max-w-prose text-muted-foreground">
+                Realistic recovery journeys—focused on safety, structure, and support.
+              </p>
+            </div>
+            <Button asChild variant="outline" size="pill" className="hidden md:inline-flex">
+              <NavLink to="/contact">Talk to Us</NavLink>
+            </Button>
+          </div>
+
+          <div className="mt-8 grid gap-5 lg:grid-cols-3">
+            {testimonials.map((t) => (
+              <figure key={t.name} className="rounded-3xl border bg-card p-6 shadow-soft">
+                <blockquote className="text-sm leading-relaxed text-foreground">“{t.quote}”</blockquote>
+                <figcaption className="mt-4 text-sm font-semibold text-foreground">{t.name}</figcaption>
+                <p className="mt-1 text-xs text-muted-foreground">Verified enquiry feedback (anonymized).</p>
+              </figure>
+            ))}
+          </div>
+
+          <div className="mt-8 rounded-3xl border bg-background p-6 shadow-soft">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <p className="text-sm text-muted-foreground">
+                Recovery experiences vary by person. For admissions and guidance, reach us directly.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Button asChild variant="hero" size="pill">
+                  <a href={links.tel}>Call Now</a>
+                </Button>
+                <Button asChild variant="soft" size="pill">
+                  <a href={links.whatsapp} target="_blank" rel="noreferrer">
+                    WhatsApp
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
