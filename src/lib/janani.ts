@@ -13,6 +13,10 @@ export const links = {
     "Hello Janani Rehabilitation Centre. I would like to know more about admission and treatments.",
   )}`,
   maps: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(JANANI.addressLine)}`,
-  // Update when you have the exact profile URL
-  instagram: "https://instagram.com/",
+  instagram: "https://www.instagram.com/janani_rehab?igsh=NTF5N3Iyb3B3NnY=",
 };
+
+export function whatsappLink(text: string) {
+  const phone = JANANI.phoneE164.replace(/\+/g, "");
+  return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+}

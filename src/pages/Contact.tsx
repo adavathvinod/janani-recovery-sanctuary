@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { JANANI, links } from "@/lib/janani";
+import WhatsAppBookingForm from "@/components/site/WhatsAppBookingForm";
 
 export default function Contact() {
   return (
@@ -42,6 +43,10 @@ export default function Contact() {
                   </a>
                 </Button>
               </div>
+            </div>
+
+            <div className="mt-6 rounded-3xl border bg-card p-6 shadow-soft">
+              <WhatsAppBookingForm />
             </div>
           </div>
 
