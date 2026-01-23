@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import logo from "@/assets/janani/hd/logo-hd.png";
 import { JANANI, links } from "@/lib/janani";
 import { cn } from "@/lib/utils";
+import WhatsAppBookingDialog from "@/components/site/WhatsAppBookingDialog";
 
 const navItems = [
   { to: "/", label: "Home" },
@@ -47,11 +48,14 @@ export default function SiteHeader() {
           ))}
         </nav>
 
-        <Button asChild variant="hero" size="pill" className="shrink-0">
-          <a href={links.tel} aria-label={`Call now ${JANANI.phone}`}>
-            Call Now
-          </a>
-        </Button>
+        <div className="flex items-center gap-2">
+          <WhatsAppBookingDialog triggerVariant="outline" />
+          <Button asChild variant="hero" size="pill" className="shrink-0">
+            <a href={links.tel} aria-label={`Call now ${JANANI.phone}`}>
+              Call Now
+            </a>
+          </Button>
+        </div>
       </div>
     </header>
   );
