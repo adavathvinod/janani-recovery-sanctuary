@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  type CarouselApi,
 } from "@/components/ui/carousel";
+import AutoScroll from "embla-carousel-auto-scroll";
 import reception1 from "@/assets/janani/hd/reception-1-hd.jpg";
 import reception2 from "@/assets/janani/hd/reception-2-hd.jpg";
 import beds from "@/assets/janani/hd/beds-1-hd.jpg";
@@ -26,18 +26,34 @@ const photos = [
 ];
 
 export default function Gallery() {
-  const [api, setApi] = useState<CarouselApi | null>(null);
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
-    if (!api) return;
     const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mql.matches) return;
+    const update = () => setReducedMotion(mql.matches);
+    update();
 
-    const id = window.setInterval(() => {
-      api.scrollNext();
-    }, 2600);
-    return () => window.clearInterval(id);
-  }, [api]);
+    // Safari < 14
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const anyMql = mql as any;
+    if (anyMql.addEventListener) {
+      mql.addEventListener("change", update);
+      return () => mql.removeEventListener("change", update);
+    }
+    mql.addListener(update);
+    return () => mql.removeListener(update);
+  }, []);
+
+  const plugins = useMemo(() => {
+    if (reducedMotion) return [];
+    return [
+      AutoScroll({
+        speed: 0.8, // slow, continuous marquee feel
+        stopOnInteraction: false, // allow swipe/drag and then continue
+        stopOnMouseEnter: true, // pause on hover (desktop)
+      }),
+    ];
+  }, [reducedMotion]);
 
   return (
     <main>
@@ -50,8 +66,8 @@ export default function Gallery() {
 
           <div className="mt-8">
             <Carousel
-              setApi={(a) => setApi(a)}
               opts={{ loop: true, align: "start" }}
+              plugins={plugins}
               className="mx-auto max-w-5xl"
             >
               <CarouselContent>
