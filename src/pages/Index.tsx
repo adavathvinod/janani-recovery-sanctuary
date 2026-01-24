@@ -132,14 +132,14 @@ const Index = () => {
           </div>
 
           <div className="md:col-span-6">
-            <div className="relative overflow-hidden rounded-3xl border bg-card shadow-elevated">
+            <div className="photo-frame">
               <img
                 src={heroImg}
                 alt="Janani rehabilitation centre reception area"
-                className="aspect-[4/3] w-full object-cover"
+                className="img-premium photo-hover aspect-[4/3] w-full object-cover"
                 loading="eager"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 via-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent" />
               <div className="absolute bottom-4 left-4 right-4 rounded-2xl border bg-background/75 p-4 shadow-soft backdrop-blur">
                 <div className="flex items-center justify-between gap-3">
                   <div>
@@ -204,30 +204,30 @@ const Index = () => {
 
           <div className="mt-10 grid gap-6 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <div className="overflow-hidden rounded-3xl border bg-card shadow-elevated">
+              <div className="photo-frame">
                 <img
                   src={bedsImg}
                   alt="Spacious accommodation with premium beds"
-                  className="aspect-[4/3] w-full object-cover"
+                  className="img-premium photo-hover aspect-[4/3] w-full object-cover"
                   loading="lazy"
                 />
               </div>
             </div>
             <div className="lg:col-span-5">
               <div className="grid gap-4">
-                <div className="overflow-hidden rounded-3xl border bg-card shadow-soft">
+                <div className="photo-frame shadow-soft">
                   <img
                     src={cctvImg}
                     alt="Security monitoring and CCTV safety"
-                    className="aspect-[4/3] w-full object-cover"
+                    className="img-premium photo-hover aspect-[4/3] w-full object-cover"
                     loading="lazy"
                   />
                 </div>
-                <div className="overflow-hidden rounded-3xl border bg-card shadow-soft">
+                <div className="photo-frame shadow-soft">
                   <img
                     src={buddhaImg}
                     alt="Meditation and wellness ambience"
-                    className="aspect-[4/3] w-full object-cover"
+                    className="img-premium photo-hover aspect-[4/3] w-full object-cover"
                     loading="lazy"
                   />
                 </div>
