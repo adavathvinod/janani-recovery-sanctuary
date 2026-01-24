@@ -136,7 +136,7 @@ const Index = () => {
               <img
                 src={heroImg}
                 alt="Janani rehabilitation centre reception area"
-                className="img-premium photo-hover aspect-[2/3] w-full object-cover"
+                className="img-premium photo-hover aspect-square w-full object-cover"
                 loading="eager"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent" />
