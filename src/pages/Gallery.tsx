@@ -68,19 +68,24 @@ export default function Gallery() {
             <Carousel
               opts={{ loop: true, align: "start" }}
               plugins={plugins}
-              className="mx-auto max-w-5xl"
+              className="mx-auto max-w-6xl"
             >
               <CarouselContent>
                 {photos.map((p) => (
-                  <CarouselItem key={p.alt} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="overflow-hidden rounded-3xl border bg-card shadow-soft">
+                  <CarouselItem key={p.alt} className="md:basis-1/2 lg:basis-[38%]">
+                    <figure className="photo-frame group">
                       <img
                         src={p.src}
                         alt={p.alt}
-                        className="aspect-[4/3] w-full object-cover"
+                        className="img-premium aspect-[16/10] w-full object-cover transition-transform duration-1000 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
                         loading="lazy"
                       />
-                    </div>
+                      <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 p-4">
+                        <div className="inline-flex max-w-full items-center gap-2 rounded-full border bg-background/70 px-3 py-1 text-xs text-muted-foreground shadow-soft backdrop-blur">
+                          {p.alt}
+                        </div>
+                      </figcaption>
+                    </figure>
                   </CarouselItem>
                 ))}
               </CarouselContent>
