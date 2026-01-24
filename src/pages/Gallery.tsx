@@ -65,33 +65,32 @@ export default function Gallery() {
           </p>
 
           <div className="mt-8">
-            <Carousel
-              opts={{ loop: true, align: "start" }}
-              plugins={plugins}
-              className="mx-auto max-w-6xl"
-            >
-              <CarouselContent>
-                {photos.map((p) => (
-                  <CarouselItem key={p.alt} className="md:basis-1/2 lg:basis-[38%]">
-                    <figure className="photo-frame group">
-                      <img
-                        src={p.src}
-                        alt={p.alt}
-                        className="img-premium aspect-[16/10] w-full object-cover transition-transform duration-1000 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
-                        loading="lazy"
-                      />
-                      <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 p-4">
-                        <div className="inline-flex max-w-full items-center gap-2 rounded-full border bg-background/70 px-3 py-1 text-xs text-muted-foreground shadow-soft backdrop-blur">
-                          {p.alt}
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden lg:flex" />
-              <CarouselNext className="hidden lg:flex" />
-            </Carousel>
+            {/* Full-bleed, premium marquee strip */}
+            <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
+              <Carousel opts={{ loop: true, align: "start" }} plugins={plugins} className="w-full">
+                <CarouselContent className="py-2">
+                  {photos.map((p) => (
+                    <CarouselItem key={p.alt} className="basis-[86%] sm:basis-[70%] md:basis-[44%] lg:basis-[34%]">
+                      <figure className="photo-frame photo-cinematic group">
+                        <img
+                          src={p.src}
+                          alt={p.alt}
+                          className="img-premium aspect-[16/10] w-full object-cover transition-transform duration-1000 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
+                          loading="lazy"
+                        />
+                        <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 p-4">
+                          <div className="inline-flex max-w-full items-center gap-2 rounded-full border bg-background/55 px-3 py-1 text-xs text-foreground shadow-soft backdrop-blur">
+                            {p.alt}
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden lg:flex" />
+                <CarouselNext className="hidden lg:flex" />
+              </Carousel>
+            </div>
           </div>
         </div>
       </section>

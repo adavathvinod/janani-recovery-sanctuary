@@ -171,9 +171,29 @@ All colors MUST be HSL.
     pointer-events: none;
   }
 
+  /* Cinematic dark variant (requested) */
+  .photo-cinematic::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* vignette + subtle color wash using tokens */
+    background:
+      radial-gradient(110% 90% at 50% 15%, transparent 40%, hsl(var(--foreground) / 0.32) 100%),
+      linear-gradient(180deg, hsl(var(--foreground) / 0.18), transparent 55%, hsl(var(--foreground) / 0.26));
+    pointer-events: none;
+    opacity: 0.9;
+  }
+
+  .photo-cinematic::after {
+    /* keep the existing highlight but slightly stronger for premium depth */
+    background:
+      radial-gradient(120% 90% at 50% 10%, hsl(var(--background) / 0.08), transparent 55%),
+      linear-gradient(180deg, transparent 35%, hsl(var(--foreground) / 0.08));
+  }
+
   .img-premium {
     /* a touch more contrast/clarity without looking over-processed */
-    filter: saturate(1.02) contrast(1.05) brightness(1.02);
+    filter: saturate(1.03) contrast(1.08) brightness(1.01);
     transform: translateZ(0);
   }
 
