@@ -132,7 +132,7 @@ const Index = () => {
           </div>
 
           <div className="md:col-span-6">
-            <div className="photo-frame">
+            <div className="photo-frame photo-cinematic">
               <img
                 src={heroImg}
                 alt="Janani rehabilitation centre reception area"
@@ -204,7 +204,7 @@ const Index = () => {
 
           <div className="mt-10 grid gap-6 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <div className="photo-frame">
+              <div className="photo-frame photo-cinematic">
                 <img
                   src={bedsImg}
                   alt="Spacious accommodation with premium beds"
@@ -215,7 +215,7 @@ const Index = () => {
             </div>
             <div className="lg:col-span-5">
               <div className="grid gap-4">
-                <div className="photo-frame shadow-soft">
+                <div className="photo-frame photo-cinematic shadow-soft">
                   <img
                     src={cctvImg}
                     alt="Security monitoring and CCTV safety"
@@ -223,7 +223,7 @@ const Index = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="photo-frame shadow-soft">
+                <div className="photo-frame photo-cinematic shadow-soft">
                   <img
                     src={buddhaImg}
                     alt="Meditation and wellness ambience"
