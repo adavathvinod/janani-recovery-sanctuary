@@ -63,6 +63,7 @@ export default function Gallery() {
         description="View photos of Janani Rehabilitation Centre's facility - premium accommodation, CCTV security, meditation areas & more. Best de-addiction centre in Hyderabad, Telangana."
         canonical="/gallery"
         keywords="rehab centre photos, rehabilitation facility hyderabad, de-addiction centre images, janani rehab gallery, addiction treatment facility telangana"
+        pageType="CollectionPage"
       />
       <section className="py-14 md:py-18">
         <div className="container">

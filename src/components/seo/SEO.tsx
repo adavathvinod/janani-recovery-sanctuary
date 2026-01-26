@@ -8,6 +8,7 @@ interface SEOProps {
   image?: string;
   type?: "website" | "article";
   noindex?: boolean;
+  pageType?: "WebPage" | "AboutPage" | "ContactPage" | "CollectionPage" | "MedicalWebPage";
 }
 
 const SITE_URL = "https://jananideaddiction.com";
@@ -21,9 +22,25 @@ export default function SEO({
   image = DEFAULT_IMAGE,
   type = "website",
   noindex = false,
+  pageType = "WebPage",
 }: SEOProps) {
   const fullTitle = title.includes("Janani") ? title : `${title} | Janani Rehabilitation Centre`;
   const url = canonical ? `${SITE_URL}${canonical}` : SITE_URL;
+
+  // Page-specific JSON-LD schema
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": pageType,
+    name: fullTitle,
+    description: description,
+    url: url,
+    inLanguage: "en-IN",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Janani Rehabilitation Centre",
+      url: SITE_URL,
+    },
+  };
 
   return (
     <Helmet>
@@ -55,6 +72,9 @@ export default function SEO({
       <meta name="geo.region" content="IN-TG" />
       <meta name="geo.placename" content="Hyderabad, Telangana" />
       <meta name="author" content="Janani Rehabilitation Centre" />
+
+      {/* Page-specific JSON-LD */}
+      <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
     </Helmet>
   );
 }
