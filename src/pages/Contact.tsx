@@ -56,8 +56,10 @@ export default function Contact() {
                 title="Janani Rehabilitation Centre Location"
                 loading="lazy"
                 className="h-[420px] w-full"
+                style={{ border: 0 }}
+                allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                src={`https://www.google.com/maps?q=${encodeURIComponent(JANANI.addressLine)}&output=embed`}
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.703149887559!2d78.59153697493335!3d17.329866083547504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba197651edd5b%3A0xa4b90fb80d6ddf39!2sJANANI%20DE-ADDICTION%20%26%20REHABILITATION%20CENTRE!5e0!3m2!1sen!2sin!4v1769425092541!5m2!1sen!2sin"
               />
             </div>
             <p className="mt-3 text-xs text-muted-foreground">
