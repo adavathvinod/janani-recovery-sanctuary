@@ -26,6 +26,7 @@ export default function Treatments() {
         description="Explore detox, counseling & therapy programs at Janani Rehabilitation Centre. Professional addiction treatment in Hyderabad, Telangana. Serving LB Nagar, Dilsukhnagar, Hayathnagar & all Telangana."
         canonical="/treatments"
         keywords="alcohol detox hyderabad, drug rehabilitation treatment, addiction counseling telangana, therapy programs, detox centre lb nagar, rehab dilsukhnagar, addiction treatment hayathnagar"
+        pageType="MedicalWebPage"
       />
       <section className="py-14 md:py-18">
         <div className="container">

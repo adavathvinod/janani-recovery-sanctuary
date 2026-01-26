@@ -9,6 +9,7 @@ export default function About() {
         description="Learn about Janani Alcohol & Drug Rehabilitation Centre's mission, approach, and commitment to professional addiction recovery in Hyderabad, Telangana. Serving Hayathnagar, LB Nagar, Dilsukhnagar & all Telangana."
         canonical="/about"
         keywords="about janani rehab, rehabilitation centre history, addiction treatment hyderabad, de-addiction mission, recovery approach telangana"
+        pageType="AboutPage"
       />
       <section className="bg-hero">
         <div className="container grid gap-10 py-14 md:grid-cols-12 md:items-center md:py-20">
