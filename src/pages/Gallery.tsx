@@ -14,6 +14,7 @@ import cctv from "@/assets/janani/hd/cctv-room-hd.jpg";
 import timetable from "@/assets/janani/hd/timetable-hd.jpg";
 import aaSteps from "@/assets/janani/hd/aa-steps-hd.jpg";
 import buddha from "@/assets/janani/hd/buddha-wall-hd.jpg";
+import SEO from "@/components/seo/SEO";
 
 const photos = [
   { src: reception1, alt: "Reception area" },
@@ -57,6 +58,12 @@ export default function Gallery() {
 
   return (
     <main>
+      <SEO
+        title="Gallery | Janani Rehabilitation Centre Photos"
+        description="View photos of Janani Rehabilitation Centre's facility - premium accommodation, CCTV security, meditation areas & more. Best de-addiction centre in Hyderabad, Telangana."
+        canonical="/gallery"
+        keywords="rehab centre photos, rehabilitation facility hyderabad, de-addiction centre images, janani rehab gallery, addiction treatment facility telangana"
+      />
       <section className="py-14 md:py-18">
         <div className="container">
           <h1 className="text-4xl md:text-5xl">Gallery</h1>

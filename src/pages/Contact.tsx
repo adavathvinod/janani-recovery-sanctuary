@@ -1,10 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { JANANI, links } from "@/lib/janani";
 import WhatsAppBookingForm from "@/components/site/WhatsAppBookingForm";
+import SEO from "@/components/seo/SEO";
 
 export default function Contact() {
   return (
     <main>
+      <SEO
+        title="Contact | Janani Rehabilitation Centre Hyderabad"
+        description="Contact Janani Rehabilitation Centre for admissions & enquiries. Call 8019577648. Located in Hayathnagar, Hyderabad. Serving LB Nagar, Dilsukhnagar, Miryalaguda, Suryapet, Khammam, Nalgonda & all Telangana."
+        canonical="/contact"
+        keywords="contact janani rehab, de-addiction centre phone, rehabilitation centre address hyderabad, rehab admissions telangana, addiction treatment contact hayathnagar"
+      />
       <section className="py-14 md:py-18">
         <div className="container grid gap-8 md:grid-cols-12">
           <div className="md:col-span-6">

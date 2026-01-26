@@ -4,7 +4,20 @@ export const JANANI = {
   phoneE164: "+918019577648",
   email: "jananirehabilition@gmail.com",
   addressLine:
-    "2nd Floor, Plot No 2, Survey No. 268, Bagh Hayathnagar Village, Hayathnagar Mandal, RR District, Telangana - 501505",
+    "No.4 Block, 2nd Floor, Plot No.2, Survey No.268, Word, Street No. 7, Hayathnagar_Khalsa, Hyderabad, Telangana 501505",
+  domain: "jananideaddiction.com",
+  instagram: "https://www.instagram.com/janani_rehab?igsh=NTF5N3Iyb3B3NnY=",
+  serviceAreas: [
+    "Hyderabad",
+    "Hayathnagar",
+    "LB Nagar",
+    "Dilsukhnagar",
+    "Miryalaguda",
+    "Suryapet",
+    "Khammam",
+    "Nalgonda",
+    "Telangana",
+  ],
 };
 
 export const links = {
@@ -13,7 +26,7 @@ export const links = {
     "Hello Janani Rehabilitation Centre. I would like to know more about admission and treatments.",
   )}`,
   maps: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(JANANI.addressLine)}`,
-  instagram: "https://www.instagram.com/janani_rehab?igsh=NTF5N3Iyb3B3NnY=",
+  instagram: JANANI.instagram,
 };
 
 export function whatsappLink(text: string) {

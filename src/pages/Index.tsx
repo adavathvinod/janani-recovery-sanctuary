@@ -7,6 +7,7 @@ import bedsImg from "@/assets/janani/hd/beds-1-hd.jpg";
 import cctvImg from "@/assets/janani/hd/cctv-room-hd.jpg";
 import buddhaImg from "@/assets/janani/hd/buddha-wall-hd.jpg";
 import { Shield, UtensilsCrossed, BedDouble, Leaf, ShieldCheck, Stethoscope, Lock } from "lucide-react";
+import SEO from "@/components/seo/SEO";
 
 const features = [
   {
@@ -88,6 +89,12 @@ const Index = () => {
 
   return (
     <main className="reduce-motion">
+      <SEO
+        title="Janani Rehabilitation Centre | Best De-Addiction Centre in Hyderabad, Telangana"
+        description="Janani Alcohol & Drug Rehabilitation Centre offers professional addiction treatment, detox, counseling & therapy in Hyderabad. Serving Hayathnagar, LB Nagar, Dilsukhnagar, Miryalaguda, Suryapet, Khammam, Nalgonda & all Telangana. Call 8019577648."
+        canonical="/"
+        keywords="rehabilitation centre hyderabad, de-addiction centre telangana, alcohol rehabilitation, drug rehabilitation, addiction treatment hyderabad, detox centre hayathnagar, rehab lb nagar, addiction counseling dilsukhnagar, best rehab miryalaguda, suryapet rehabilitation, khammam de-addiction, nalgonda rehab centre"
+      />
       <section ref={(n) => (heroRef.current = n)} className="bg-hero">
         <div className="container grid gap-10 py-14 md:grid-cols-12 md:items-center md:py-20">
           <div className="md:col-span-6">
