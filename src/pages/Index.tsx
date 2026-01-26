@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { JANANI, links } from "@/lib/janani";
 import { NavLink } from "@/components/NavLink";
-import heroImg from "@/assets/janani/hd/hero-portrait-6x9.jpg";
+import heroImg from "@/assets/janani/hd/reception-2-hd.jpg";
 import bedsImg from "@/assets/janani/hd/beds-1-hd.jpg";
 import cctvImg from "@/assets/janani/hd/cctv-room-hd.jpg";
 import buddhaImg from "@/assets/janani/hd/buddha-wall-hd.jpg";
@@ -136,7 +136,7 @@ const Index = () => {
               <img
                 src={heroImg}
                 alt="Janani rehabilitation centre reception area"
-                className="img-premium photo-hover aspect-square w-full object-cover"
+                className="img-premium photo-hover aspect-[4/3] w-full object-cover"
                 loading="eager"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent" />
