@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import { JANANI, links } from "@/lib/janani";
+import SEO from "@/components/seo/SEO";
 
 const items = [
   {
@@ -20,6 +21,12 @@ const items = [
 export default function Treatments() {
   return (
     <main>
+      <SEO
+        title="Treatments | Alcohol & Drug Rehabilitation in Hyderabad"
+        description="Explore detox, counseling & therapy programs at Janani Rehabilitation Centre. Professional addiction treatment in Hyderabad, Telangana. Serving LB Nagar, Dilsukhnagar, Hayathnagar & all Telangana."
+        canonical="/treatments"
+        keywords="alcohol detox hyderabad, drug rehabilitation treatment, addiction counseling telangana, therapy programs, detox centre lb nagar, rehab dilsukhnagar, addiction treatment hayathnagar"
+      />
       <section className="py-14 md:py-18">
         <div className="container">
           <h1 className="text-4xl md:text-5xl">Treatments</h1>
