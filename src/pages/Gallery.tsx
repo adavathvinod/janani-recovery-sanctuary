@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   Carousel,
   CarouselContent,
@@ -14,7 +15,6 @@ import cctv from "@/assets/janani/hd/cctv-room-hd.jpg";
 import timetable from "@/assets/janani/hd/timetable-hd.jpg";
 import aaSteps from "@/assets/janani/hd/aa-steps-hd.jpg";
 import buddha from "@/assets/janani/hd/buddha-wall-hd.jpg";
-import SEO from "@/components/seo/SEO";
 
 const photos = [
   { src: reception1, alt: "Reception area" },
@@ -49,22 +49,68 @@ export default function Gallery() {
     if (reducedMotion) return [];
     return [
       AutoScroll({
-        speed: 0.8, // slow, continuous marquee feel
-        stopOnInteraction: false, // allow swipe/drag and then continue
-        stopOnMouseEnter: true, // pause on hover (desktop)
+        speed: 0.8,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
       }),
     ];
   }, [reducedMotion]);
 
   return (
     <main>
-      <SEO
-        title="Gallery | Janani Rehabilitation Centre Photos"
-        description="View photos of Janani Rehabilitation Centre's facility - premium accommodation, CCTV security, meditation areas & more. Best de-addiction centre in Hyderabad, Telangana."
-        canonical="/gallery"
-        keywords="rehab centre photos, rehabilitation facility hyderabad, de-addiction centre images, janani rehab gallery, addiction treatment facility telangana"
-        pageType="CollectionPage"
-      />
+      <Helmet>
+        {/* ===============================
+            PRIMARY SEO
+        =============================== */}
+        <title>Gallery | Janani Rehabilitation Centre Photos</title>
+        <meta name="description" content="View photos of Janani Rehabilitation Centre's facility - premium accommodation, CCTV security, meditation areas & more. Best de-addiction centre in Hyderabad, Telangana." />
+        <meta name="keywords" content="rehab centre photos, rehabilitation facility hyderabad, de-addiction centre images, janani rehab gallery, addiction treatment facility telangana, rehab rooms hyderabad" />
+        <meta name="author" content="Janani Rehabilitation Centre" />
+        <meta name="robots" content="index, follow" />
+        <meta name="geo.region" content="IN-TG" />
+        <meta name="geo.placename" content="Hyderabad, Telangana" />
+        <link rel="canonical" href="https://jananideaddiction.com/gallery" />
+
+        {/* ===============================
+            OPEN GRAPH
+        =============================== */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://jananideaddiction.com/gallery" />
+        <meta property="og:title" content="Gallery | Janani Rehabilitation Centre Photos" />
+        <meta property="og:description" content="View photos of Janani Rehabilitation Centre's premium facility in Hyderabad, Telangana." />
+        <meta property="og:image" content="https://jananideaddiction.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Janani Rehabilitation Centre" />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* ===============================
+            TWITTER
+        =============================== */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Gallery | Janani Rehabilitation Centre Photos" />
+        <meta name="twitter:description" content="View photos of our premium rehabilitation facility in Hyderabad." />
+        <meta name="twitter:image" content="https://jananideaddiction.com/og-image.jpg" />
+
+        {/* ===============================
+            STRUCTURED DATA
+        =============================== */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Janani Rehabilitation Centre Gallery",
+            "description": "Photo gallery showcasing Janani Rehabilitation Centre's premium facilities in Hyderabad, Telangana.",
+            "url": "https://jananideaddiction.com/gallery",
+            "mainEntity": {
+              "@type": "ImageGallery",
+              "name": "Facility Photos",
+              "description": "Premium accommodation, CCTV security, meditation areas and more at Janani Rehabilitation Centre"
+            }
+          })}
+        </script>
+      </Helmet>
+
       <section className="py-14 md:py-18">
         <div className="container">
           <h1 className="text-4xl md:text-5xl">Gallery</h1>

@@ -1,18 +1,84 @@
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { JANANI, links } from "@/lib/janani";
 import WhatsAppBookingForm from "@/components/site/WhatsAppBookingForm";
-import SEO from "@/components/seo/SEO";
 
 export default function Contact() {
   return (
     <main>
-      <SEO
-        title="Contact | Janani Rehabilitation Centre Hyderabad"
-        description="Contact Janani Rehabilitation Centre for admissions & enquiries. Call 8019577648. Located in Hayathnagar, Hyderabad. Serving LB Nagar, Dilsukhnagar, Miryalaguda, Suryapet, Khammam, Nalgonda & all Telangana."
-        canonical="/contact"
-        keywords="contact janani rehab, de-addiction centre phone, rehabilitation centre address hyderabad, rehab admissions telangana, addiction treatment contact hayathnagar"
-        pageType="ContactPage"
-      />
+      <Helmet>
+        {/* ===============================
+            PRIMARY SEO
+        =============================== */}
+        <title>Contact | Janani Rehabilitation Centre Hyderabad</title>
+        <meta name="description" content="Contact Janani Rehabilitation Centre for admissions & enquiries. Call 8019577648. Located in Hayathnagar, Hyderabad. Serving LB Nagar, Dilsukhnagar, Miryalaguda, Suryapet, Khammam, Nalgonda & all Telangana." />
+        <meta name="keywords" content="contact janani rehab, de-addiction centre phone, rehabilitation centre address hyderabad, rehab admissions telangana, addiction treatment contact hayathnagar, rehab enquiry lb nagar" />
+        <meta name="author" content="Janani Rehabilitation Centre" />
+        <meta name="robots" content="index, follow" />
+        <meta name="geo.region" content="IN-TG" />
+        <meta name="geo.placename" content="Hyderabad, Telangana" />
+        <link rel="canonical" href="https://jananideaddiction.com/contact" />
+
+        {/* ===============================
+            OPEN GRAPH
+        =============================== */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://jananideaddiction.com/contact" />
+        <meta property="og:title" content="Contact | Janani Rehabilitation Centre Hyderabad" />
+        <meta property="og:description" content="Contact Janani Rehabilitation Centre for admissions & enquiries. Call 8019577648. Located in Hayathnagar, Hyderabad." />
+        <meta property="og:image" content="https://jananideaddiction.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Janani Rehabilitation Centre" />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* ===============================
+            TWITTER
+        =============================== */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact | Janani Rehabilitation Centre Hyderabad" />
+        <meta name="twitter:description" content="Contact us for admissions & enquiries. Call 8019577648." />
+        <meta name="twitter:image" content="https://jananideaddiction.com/og-image.jpg" />
+
+        {/* ===============================
+            STRUCTURED DATA
+        =============================== */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Janani Rehabilitation Centre",
+            "description": "Contact Janani Rehabilitation Centre for admissions & enquiries in Hyderabad, Telangana.",
+            "url": "https://jananideaddiction.com/contact",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Janani Alcohol & Drug Rehabilitation Centre",
+              "telephone": "+91-8019577648",
+              "email": "jananirehabilition@gmail.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "No.4 Block, 2nd Floor, Plot No.2, Survey No.268, Word, Street No. 7, Hayathnagar_Khalsa",
+                "addressLocality": "Hyderabad",
+                "addressRegion": "Telangana",
+                "postalCode": "501505",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 17.329866,
+                "longitude": 78.593726
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-8019577648",
+                "contactType": "Admissions & Enquiry",
+                "availableLanguage": ["English", "Hindi", "Telugu"]
+              }
+            }
+          })}
+        </script>
+      </Helmet>
+
       <section className="py-14 md:py-18">
         <div className="container grid gap-8 md:grid-cols-12">
           <div className="md:col-span-6">
@@ -71,7 +137,7 @@ export default function Contact() {
               />
             </div>
             <p className="mt-3 text-xs text-muted-foreground">
-              If the embedded map is blocked on some devices, use “Open Maps” above.
+              If the embedded map is blocked on some devices, use "Open Maps" above.
             </p>
           </div>
         </div>
