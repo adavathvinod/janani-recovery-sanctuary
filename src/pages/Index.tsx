@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { JANANI, links } from "@/lib/janani";
 import { NavLink } from "@/components/NavLink";
@@ -7,7 +8,6 @@ import bedsImg from "@/assets/janani/hd/beds-1-hd.jpg";
 import cctvImg from "@/assets/janani/hd/cctv-room-hd.jpg";
 import buddhaImg from "@/assets/janani/hd/buddha-wall-hd.jpg";
 import { Shield, UtensilsCrossed, BedDouble, Leaf, ShieldCheck, Stethoscope, Lock } from "lucide-react";
-import SEO from "@/components/seo/SEO";
 
 const features = [
   {
@@ -64,7 +64,7 @@ const testimonials = [
   {
     name: "Family Member",
     quote:
-      "Before: we didn’t know where to start. After: clear guidance, confidential support, and fast responses made the process feel safe and manageable.",
+      "Before: we didn't know where to start. After: clear guidance, confidential support, and fast responses made the process feel safe and manageable.",
   },
 ];
 
@@ -89,12 +89,95 @@ const Index = () => {
 
   return (
     <main className="reduce-motion">
-      <SEO
-        title="Janani Rehabilitation Centre | Best De-Addiction Centre in Hyderabad, Telangana"
-        description="Janani Alcohol & Drug Rehabilitation Centre offers professional addiction treatment, detox, counseling & therapy in Hyderabad. Serving Hayathnagar, LB Nagar, Dilsukhnagar, Miryalaguda, Suryapet, Khammam, Nalgonda & all Telangana. Call 8019577648."
-        canonical="/"
-        keywords="rehabilitation centre hyderabad, de-addiction centre telangana, alcohol rehabilitation, drug rehabilitation, addiction treatment hyderabad, detox centre hayathnagar, rehab lb nagar, addiction counseling dilsukhnagar, best rehab miryalaguda, suryapet rehabilitation, khammam de-addiction, nalgonda rehab centre"
-      />
+      <Helmet>
+        {/* ===============================
+            PRIMARY SEO
+        =============================== */}
+        <title>Janani Rehabilitation Centre | Best De-Addiction Centre in Hyderabad, Telangana</title>
+        <meta name="description" content="Janani Alcohol & Drug Rehabilitation Centre offers professional addiction treatment, detox, counseling & therapy in Hyderabad. Serving Hayathnagar, LB Nagar, Dilsukhnagar, Miryalaguda, Suryapet, Khammam, Nalgonda & all Telangana. Call 8019577648." />
+        <meta name="keywords" content="rehabilitation centre hyderabad, de-addiction centre telangana, alcohol rehabilitation, drug rehabilitation, addiction treatment hyderabad, detox centre hayathnagar, rehab lb nagar, addiction counseling dilsukhnagar, best rehab miryalaguda, suryapet rehabilitation, khammam de-addiction, nalgonda rehab centre" />
+        <meta name="author" content="Janani Rehabilitation Centre" />
+        <meta name="robots" content="index, follow" />
+        <meta name="geo.region" content="IN-TG" />
+        <meta name="geo.placename" content="Hyderabad, Telangana" />
+        <link rel="canonical" href="https://jananideaddiction.com/" />
+
+        {/* ===============================
+            OPEN GRAPH
+        =============================== */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://jananideaddiction.com/" />
+        <meta property="og:title" content="Janani Rehabilitation Centre | Best De-Addiction Centre in Hyderabad" />
+        <meta property="og:description" content="Professional alcohol & drug rehabilitation in Hyderabad, Telangana. Expert detox, counseling & therapy. Serving Hayathnagar, LB Nagar, Dilsukhnagar & all Telangana. Call 8019577648." />
+        <meta property="og:image" content="https://jananideaddiction.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Janani Rehabilitation Centre" />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* ===============================
+            TWITTER
+        =============================== */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Janani Rehabilitation Centre | Best De-Addiction Centre Hyderabad" />
+        <meta name="twitter:description" content="Professional alcohol & drug rehabilitation in Hyderabad, Telangana. Call 8019577648." />
+        <meta name="twitter:image" content="https://jananideaddiction.com/og-image.jpg" />
+
+        {/* ===============================
+            STRUCTURED DATA
+        =============================== */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "Janani Alcohol & Drug Rehabilitation Centre",
+            "url": "https://jananideaddiction.com",
+            "logo": "https://jananideaddiction.com/logo.png",
+            "image": "https://jananideaddiction.com/og-image.jpg",
+            "description": "Janani Alcohol & Drug Rehabilitation Centre provides professional addiction treatment, detox programs, counseling, and therapy in Hyderabad, Telangana.",
+            "telephone": "+91-8019577648",
+            "email": "jananirehabilition@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "No.4 Block, 2nd Floor, Plot No.2, Survey No.268, Word, Street No. 7, Hayathnagar_Khalsa",
+              "addressLocality": "Hyderabad",
+              "addressRegion": "Telangana",
+              "postalCode": "501505",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 17.329866,
+              "longitude": 78.593726
+            },
+            "areaServed": [
+              "Hyderabad",
+              "Hayathnagar",
+              "LB Nagar",
+              "Dilsukhnagar",
+              "Miryalaguda",
+              "Suryapet",
+              "Khammam",
+              "Nalgonda",
+              "Telangana"
+            ],
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "00:00",
+              "closes": "23:59"
+            },
+            "priceRange": "$$",
+            "medicalSpecialty": ["Addiction Medicine", "Psychiatry", "Substance Abuse Treatment"],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-8019577648",
+              "contactType": "Customer Support",
+              "availableLanguage": ["English", "Hindi", "Telugu"]
+            }
+          })}
+        </script>
+      </Helmet>
       <section ref={(n) => (heroRef.current = n)} className="bg-hero">
         <div className="container grid gap-10 py-14 md:grid-cols-12 md:items-center md:py-20">
           <div className="md:col-span-6">
