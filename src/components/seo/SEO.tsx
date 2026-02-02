@@ -12,7 +12,9 @@ interface SEOProps {
 }
 
 const SITE_URL = "https://jananideaddiction.com";
+const SITE_NAME = "Janani Rehabilitation Centre";
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.jpg`;
+const PHONE = "8019577648";
 
 export default function SEO({
   title,
@@ -37,20 +39,31 @@ export default function SEO({
     inLanguage: "en-IN",
     isPartOf: {
       "@type": "WebSite",
-      name: "Janani Rehabilitation Centre",
+      name: SITE_NAME,
       url: SITE_URL,
     },
   };
 
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
+      {/* Basic Meta */}
+      <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      {/* Primary SEO */}
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="author" content={SITE_NAME} />
+      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+
+      {/* Geo Tags */}
+      <meta name="geo.region" content="IN-TG" />
+      <meta name="geo.placename" content="Hyderabad, Telangana" />
+
+      {/* Canonical URL */}
       <link rel="canonical" href={url} />
-      {noindex && <meta name="robots" content="noindex, nofollow" />}
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
@@ -58,7 +71,7 @@ export default function SEO({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Janani Rehabilitation Centre" />
+      <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content="en_IN" />
 
       {/* Twitter */}
@@ -68,10 +81,8 @@ export default function SEO({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
 
-      {/* Additional SEO */}
-      <meta name="geo.region" content="IN-TG" />
-      <meta name="geo.placename" content="Hyderabad, Telangana" />
-      <meta name="author" content="Janani Rehabilitation Centre" />
+      {/* Contact Info for Rich Results */}
+      <meta name="contact" content={PHONE} />
 
       {/* Page-specific JSON-LD */}
       <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
