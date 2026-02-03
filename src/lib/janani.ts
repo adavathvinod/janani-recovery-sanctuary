@@ -21,11 +21,9 @@ export const JANANI = {
 };
 
 export const links = {
-  tel: `tel:${JANANI.phone}`,
-  whatsapp: `https://wa.me/918019577648?text=${encodeURIComponent(
-    "Hello Janani Rehabilitation Centre. I would like to know more about admission and treatments.",
-  )}`,
-  maps: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(JANANI.addressLine)}`,
+ tel: "tel:+918019577648",
+  whatsapp: "https://wa.me/918019577648",
+  maps: "https://maps.app.goo.gl/cx2M3wCL2MznQouH7",
   instagram: JANANI.instagram,
 };
 
