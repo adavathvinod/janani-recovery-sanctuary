@@ -1,0 +1,12 @@
+Options -MultiViews
+RewriteEngine On
+
+# Force HTTPS + non-www canonical
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.jananideaddiction\.com$ [NC]
+RewriteRule ^ https://jananideaddiction.com%{REQUEST_URI} [L,R=301]
+
+# React SPA fallback (do NOT redirect)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
