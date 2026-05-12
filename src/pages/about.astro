@@ -1,0 +1,68 @@
+---
+// @ts-nocheck
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/site/SiteHeader';
+import SiteFooter from '@/components/site/SiteFooter';
+import FloatingActions from '@/components/site/FloatingActions';
+import { getAboutPageSchema } from '@/lib/structured-data';
+
+const structuredData = getAboutPageSchema();
+---
+
+<Layout
+  title="About Us | Janani Rehabilitation Centre Hyderabad"
+  description="Learn about Janani Alcohol & Drug Rehabilitation Centre's mission, approach, and commitment to professional addiction recovery in Hyderabad, Telangana."
+  keywords="about janani rehab, rehabilitation centre history, addiction treatment hyderabad, de-addiction mission, recovery approach telangana"
+  canonicalUrl="/about"
+  structuredData={structuredData}
+>
+  <div class="min-h-screen bg-background text-foreground">
+    <SiteHeader currentPath="/about" client:load />
+
+    <section class="bg-hero">
+      <div class="container grid gap-10 py-14 md:grid-cols-12 md:items-center md:py-20">
+        <div class="md:col-span-6">
+          <h1 class="text-4xl md:text-5xl">About Janani</h1>
+          <p class="mt-4 text-lg text-muted-foreground">
+            Janani Alcohol & Drug Rehabilitation Centre is committed to providing structured, professional support for recovery—within a calm, clean, and respectful environment.
+          </p>
+          <div class="mt-6 grid gap-4 rounded-2xl border bg-background/70 p-5 shadow-soft">
+            <div>
+              <div class="text-sm font-semibold">Our mission</div>
+              <div class="text-sm text-muted-foreground">To help individuals reclaim health, dignity, and stability.</div>
+            </div>
+            <div>
+              <div class="text-sm font-semibold">Our approach</div>
+              <div class="text-sm text-muted-foreground">
+                A balanced blend of clinical guidance, counseling, routine, and wellness practices.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-6">
+          <div class="overflow-hidden rounded-3xl border bg-card shadow-elevated">
+            <img src="/images/buddha-wall-hd.jpg" alt="Wellness ambience at Janani" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 md:py-18">
+      <div class="container max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-foreground mb-6">Our Commitment to Recovery</h2>
+        <p class="text-muted-foreground leading-relaxed mb-4">
+          At Janani, we understand that addiction is a complex medical and behavioral condition that requires comprehensive, compassionate care. Our team of trained professionals is dedicated to providing personalized treatment plans that address the unique needs of each individual.
+        </p>
+        <p class="text-muted-foreground leading-relaxed mb-4">
+          We believe that recovery is possible for everyone. Through a combination of medical supervision, counseling, therapy, and holistic wellness practices, we help individuals break free from addiction and build a foundation for long-term recovery.
+        </p>
+        <p class="text-muted-foreground leading-relaxed mb-4">
+          Our facilities are designed to provide a safe, clean, and peaceful environment where healing can take place. We maintain strict confidentiality and treat all patients with respect and dignity.
+        </p>
+      </div>
+    </section>
+
+    <SiteFooter client:load />
+    <FloatingActions client:load />
+  </div>
+</Layout>

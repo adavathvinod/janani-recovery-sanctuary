@@ -1,0 +1,79 @@
+---
+// @ts-nocheck
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/site/SiteHeader';
+import SiteFooter from '@/components/site/SiteFooter';
+import FloatingActions from '@/components/site/FloatingActions';
+import WhatsAppBookingDialog from '@/components/site/WhatsAppBookingDialog';
+import { getContactPageSchema } from '@/lib/structured-data';
+
+const structuredData = getContactPageSchema();
+---
+
+<Layout
+  title="Contact | Janani Rehabilitation Centre Hyderabad"
+  description="Get in touch with Janani Rehabilitation Centre for admissions, enquiries, and support services."
+  keywords="contact janani, janani phone number, janani address, addiction treatment contact"
+  canonicalUrl="/contact"
+  structuredData={structuredData}
+>
+  <div class="min-h-screen bg-background text-foreground">
+    <SiteHeader currentPath="/contact" client:load />
+
+    <section class="py-14 md:py-18">
+      <div class="container">
+        <h1 class="text-4xl md:text-5xl">Contact Us</h1>
+        <p class="mt-4 text-lg text-muted-foreground">
+          Reach out to Janani for admissions, enquiries, and support. We're here to help.
+        </p>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl border bg-card p-6 shadow-soft">
+            <h3 class="text-lg font-semibold">Phone</h3>
+            <p class="mt-3 text-sm text-muted-foreground">
+              <a href="tel:+918019577648" class="text-primary hover:underline">
+                +91 801 957 7648
+              </a>
+            </p>
+            <p class="mt-2 text-xs text-muted-foreground">Available 24/7 for emergencies and enquiries</p>
+          </div>
+
+          <div class="rounded-2xl border bg-card p-6 shadow-soft">
+            <h3 class="text-lg font-semibold">Email</h3>
+            <p class="mt-3 text-sm text-muted-foreground">
+              <a href="mailto:jananirehabilition@gmail.com" class="text-primary hover:underline">
+                jananirehabilition@gmail.com
+              </a>
+            </p>
+            <p class="mt-2 text-xs text-muted-foreground">We respond to all enquiries quickly</p>
+          </div>
+
+          <div class="rounded-2xl border bg-card p-6 shadow-soft">
+            <h3 class="text-lg font-semibold">Location</h3>
+            <p class="mt-3 text-sm text-muted-foreground">
+              Hayathnagar, Hyderabad, Telangana 501505
+            </p>
+            <p class="mt-2">
+              <a href="https://maps.app.goo.gl/cx2M3wCL2MznQouH7" target="_blank" rel="noreferrer" class="text-primary hover:underline text-xs">
+                View on Google Maps →
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 max-w-2xl">
+          <h2 class="text-2xl font-semibold mb-6">Quick Enquiry</h2>
+          <div class="flex gap-3">
+            <WhatsAppBookingDialog triggerLabel="Message on WhatsApp" client:load />
+            <a href="tel:+918019577648" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+              Call Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SiteFooter client:load />
+    <FloatingActions client:load />
+  </div>
+</Layout>

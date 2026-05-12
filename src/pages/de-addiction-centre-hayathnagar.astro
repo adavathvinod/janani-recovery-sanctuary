@@ -1,0 +1,121 @@
+---
+// @ts-nocheck
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/site/SiteHeader';
+import SiteFooter from '@/components/site/SiteFooter';
+import FloatingActions from '@/components/site/FloatingActions';
+import { getServiceLocationSchema } from '@/lib/structured-data';
+
+const structuredData = getServiceLocationSchema(
+  "De-Addiction Centre",
+  "de-addiction-centre-hayathnagar",
+  "Professional de-addiction and rehabilitation centre in Hayathnagar, Hyderabad, Telangana"
+);
+---
+
+<Layout
+  title="De-Addiction Centre in Hayathnagar | Janani Rehabilitation Centre"
+  description="De-addiction centre in Hayathnagar offering alcohol and drug rehabilitation treatment. Professional medical supervision and counseling. Call 8019577648."
+  keywords="de-addiction centre hayathnagar, rehabilitation centre near me, addiction treatment, alcohol rehab, drug detox"
+  canonicalUrl="/de-addiction-centre-hayathnagar"
+  structuredData={structuredData}
+>
+  <div class="min-h-screen bg-background text-foreground">
+    <SiteHeader currentPath="/de-addiction-centre-hayathnagar" client:load />
+
+    <section class="bg-hero">
+      <div class="container py-14 md:py-20">
+        <h1 class="text-4xl md:text-5xl">De-Addiction Centre in Hayathnagar</h1>
+        <p class="mt-4 max-w-prose text-lg text-muted-foreground">
+          Located in Hayathnagar, Hyderabad. Professional de-addiction and rehabilitation services with medical supervision, counseling, and therapy.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="tel:+918019577648" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90">
+            Call Now
+          </a>
+          <a href="https://wa.me/918019577648" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-medium hover:bg-accent/50">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 md:py-18">
+      <div class="container max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6">De-Addiction Treatment in Hayathnagar</h2>
+
+        <p class="text-muted-foreground leading-relaxed mb-6">
+          Janani Rehabilitation Centre is conveniently located in Hayathnagar, Hyderabad, providing accessible de-addiction and rehabilitation services to individuals across Telangana. Our facility specializes in treating both alcohol and drug addiction with a comprehensive, evidence-based approach.
+        </p>
+
+        <p class="text-muted-foreground leading-relaxed mb-6">
+          With easy access from Hayathnagar and surrounding areas, we provide professional treatment that combines medical detoxification, psychological counseling, and ongoing therapeutic support. Our goal is to help individuals and families overcome addiction and build a path to lasting recovery.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Our De-Addiction Program</h3>
+
+        <div class="grid gap-6 md:grid-cols-2 mb-8">
+          <div class="rounded-2xl border bg-card p-6">
+            <h4 class="font-semibold mb-3">Comprehensive Assessment</h4>
+            <p class="text-sm text-muted-foreground">Detailed evaluation to understand the severity and type of addiction for personalized treatment planning.</p>
+          </div>
+          <div class="rounded-2xl border bg-card p-6">
+            <h4 class="font-semibold mb-3">Medical Detoxification</h4>
+            <p class="text-sm text-muted-foreground">Safe, supervised detox with medical support to manage withdrawal symptoms safely and comfortably.</p>
+          </div>
+          <div class="rounded-2xl border bg-card p-6">
+            <h4 class="font-semibold mb-3">Individual & Group Therapy</h4>
+            <p class="text-sm text-muted-foreground">Professional counseling sessions addressing root causes and building coping mechanisms.</p>
+          </div>
+          <div class="rounded-2xl border bg-card p-6">
+            <h4 class="font-semibold mb-3">Family Support Programs</h4>
+            <p class="text-sm text-muted-foreground">Involving family members in the recovery process for stronger support systems.</p>
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4">Why Choose Janani Hayathnagar?</h3>
+
+        <ul class="space-y-3 text-muted-foreground mb-8">
+          <li class="flex gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Conveniently located in Hayathnagar for easy access</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Experienced medical team specializing in addiction treatment</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>24/7 availability for emergencies and admissions</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Confidential and secure environment</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Aftercare and relapse prevention support</span>
+          </li>
+        </ul>
+
+        <div class="rounded-3xl border bg-surface p-6 md:p-8">
+          <h3 class="text-2xl font-semibold mb-4">Contact Us Today</h3>
+          <p class="text-muted-foreground mb-6">
+            Located in Hayathnagar, we're ready to help you take the first step towards recovery. Reach out today for a confidential consultation.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="tel:+918019577648" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-medium text-primary-foreground hover:opacity-90">
+              Call 8019577648
+            </a>
+            <a href="https://maps.app.goo.gl/cx2M3wCL2MznQouH7" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full border px-6 py-3 font-medium hover:bg-accent/50">
+              Visit Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SiteFooter client:load />
+    <FloatingActions client:load />
+  </div>
+</Layout>

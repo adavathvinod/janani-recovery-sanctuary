@@ -1,0 +1,75 @@
+{
+  "name": "Janani Rehabilitation Centre",
+  "short_name": "Janani Rehab",
+  "description": "Alcohol & Drug Rehabilitation Centre in Hyderabad, Telangana",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a7f8e",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/logo-hd.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "medical", "healthcare"],
+  "shortcuts": [
+    {
+      "name": "Book Consultation",
+      "short_name": "Consultation",
+      "description": "Schedule a consultation with our team",
+      "url": "/contact?action=book",
+      "icons": [
+        {
+          "src": "/logo-hd.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Treatments",
+      "short_name": "Treatments",
+      "description": "View our treatment programs",
+      "url": "/treatments",
+      "icons": [
+        {
+          "src": "/logo-hd.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Alcohol Rehabilitation",
+      "short_name": "Alcohol Rehab",
+      "description": "Alcohol rehabilitation services",
+      "url": "/alcohol-rehabilitation-hyderabad",
+      "icons": [
+        {
+          "src": "/logo-hd.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Drug Rehabilitation",
+      "short_name": "Drug Rehab",
+      "description": "Drug rehabilitation services",
+      "url": "/drug-rehabilitation-hyderabad",
+      "icons": [
+        {
+          "src": "/logo-hd.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
