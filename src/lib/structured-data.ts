@@ -2,7 +2,7 @@
 // This enables Knowledge Graph, Rich Snippets, and enhanced search appearance
 
 const BASE_URL = "https://jananideaddiction.com";
-const PHONE = "+918019577648";
+const PHONE = "+916302682285";
 const EMAIL = "jananirehabilition@gmail.com";
 const STREET_ADDRESS = "No.4 Block, 2nd Floor, Plot No.2, Survey No.268, Word, Street No. 7, Hayathnagar_Khalsa";
 const MAPS_URL = "https://maps.app.goo.gl/cx2M3wCL2MznQouH7";
