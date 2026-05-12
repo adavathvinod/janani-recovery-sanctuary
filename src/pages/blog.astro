@@ -1,0 +1,92 @@
+---
+// @ts-nocheck
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/site/SiteHeader';
+import SiteFooter from '@/components/site/SiteFooter';
+import FloatingActions from '@/components/site/FloatingActions';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Janani Blog',
+  description: 'Read articles about addiction recovery, rehabilitation, and mental health from Janani Rehabilitation Centre',
+  url: 'https://jananideaddiction.com/blog'
+};
+---
+
+<Layout
+  title="Blog | Janani Rehabilitation Centre Hyderabad"
+  description="Read insightful articles about addiction recovery, rehabilitation techniques, and mental health insights from Janani Rehabilitation Centre experts."
+  keywords="addiction recovery blog, rehabilitation articles, mental health, de-addiction tips, recovery insights hyderabad"
+  canonicalUrl="/blog"
+  structuredData={structuredData}
+>
+  <div class="min-h-screen bg-background text-foreground">
+    <SiteHeader currentPath="/blog" client:load />
+
+    <section class="bg-hero">
+      <div class="container py-14 md:py-20">
+        <div class="max-w-2xl">
+          <h1 class="text-4xl md:text-5xl">Blog</h1>
+          <p class="mt-4 text-lg text-muted-foreground">
+            Insights and articles on addiction recovery, rehabilitation, and wellness from our expert team.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 md:py-18">
+      <div class="container max-w-4xl">
+        <div class="grid gap-8">
+          <article class="rounded-2xl border bg-card p-6 shadow-soft hover:shadow-elevated transition-shadow">
+            <div class="flex flex-col gap-4">
+              <div>
+                <time class="text-sm text-muted-foreground">May 12, 2026</time>
+                <h2 class="mt-2 text-2xl font-bold text-foreground">Understanding Addiction Recovery</h2>
+              </div>
+              <p class="text-muted-foreground leading-relaxed">
+                Discover the key phases of addiction recovery and how professional support can help you or your loved ones navigate the path to healing.
+              </p>
+              <a href="#" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
+                Read More →
+              </a>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border bg-card p-6 shadow-soft hover:shadow-elevated transition-shadow">
+            <div class="flex flex-col gap-4">
+              <div>
+                <time class="text-sm text-muted-foreground">May 5, 2026</time>
+                <h2 class="mt-2 text-2xl font-bold text-foreground">The Role of Counseling in Recovery</h2>
+              </div>
+              <p class="text-muted-foreground leading-relaxed">
+                Learn how professional counseling and therapy form the foundation of effective addiction treatment and long-term recovery.
+              </p>
+              <a href="#" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
+                Read More →
+              </a>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border bg-card p-6 shadow-soft hover:shadow-elevated transition-shadow">
+            <div class="flex flex-col gap-4">
+              <div>
+                <time class="text-sm text-muted-foreground">April 28, 2026</time>
+                <h2 class="mt-2 text-2xl font-bold text-foreground">Wellness Practices for Mental Health</h2>
+              </div>
+              <p class="text-muted-foreground leading-relaxed">
+                Explore holistic wellness practices and lifestyle changes that support mental health and strengthen your recovery journey.
+              </p>
+              <a href="#" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
+                Read More →
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <SiteFooter client:load />
+    <FloatingActions client:load />
+  </div>
+</Layout>
