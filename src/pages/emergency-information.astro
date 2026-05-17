@@ -1,0 +1,157 @@
+---
+// @ts-nocheck
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/site/SiteHeader';
+import SiteFooter from '@/components/site/SiteFooter';
+import FloatingActions from '@/components/site/FloatingActions';
+---
+
+<Layout
+  title="Emergency Information | Janani Wellness Centre"
+  description="Important emergency contact information and crisis resources for Janani Wellness Centre."
+  canonicalUrl="/emergency-information"
+>
+  <div class="min-h-screen bg-background text-foreground">
+    <SiteHeader currentPath="/emergency-information" client:load />
+
+    <section class="bg-hero">
+      <div class="container py-14 md:py-20">
+        <h1 class="text-4xl md:text-5xl">Emergency Information</h1>
+        <p class="mt-4 max-w-prose text-lg text-muted-foreground">
+          Critical information for medical emergencies and crisis situations
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 md:py-18">
+      <div class="container max-w-4xl">
+        <div class="prose prose-invert max-w-none space-y-6 text-muted-foreground">
+          <div class="rounded-2xl border border-red-600/50 bg-red-600/10 p-6 mb-6">
+            <p class="font-semibold text-red-200 text-lg">IN CASE OF MEDICAL EMERGENCY</p>
+            <p class="text-xl font-bold text-red-300 mt-2">Call Emergency Services: 108</p>
+          </div>
+
+          <h2 class="text-2xl font-semibold text-foreground">Important Emergency Notice</h2>
+          <p>
+            Janani Wellness Centre is a structured wellness support facility, NOT an emergency medical facility. If you or someone else experiences a life-threatening medical emergency, immediately call emergency services (108) or proceed to the nearest hospital emergency department.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">When to Call Emergency Services</h2>
+          <p>
+            Immediately call 108 or go to the nearest hospital if you experience:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Chest pain or difficulty breathing</li>
+            <li>Severe bleeding or injury</li>
+            <li>Signs of stroke (facial drooping, arm weakness, speech difficulty)</li>
+            <li>Loss of consciousness or severe confusion</li>
+            <li>Severe allergic reactions</li>
+            <li>Overdose or poisoning</li>
+            <li>Suicidal thoughts or self-harm urges</li>
+            <li>Severe seizures</li>
+            <li>Any other life-threatening situation</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Crisis Support Resources</h2>
+          <div class="bg-surface rounded-2xl p-6 space-y-4">
+            <div>
+              <p class="font-semibold text-lg">National Emergency</p>
+              <p class="text-xl font-bold">108</p>
+              <p class="text-sm">Ambulance and emergency medical services</p>
+            </div>
+            <div>
+              <p class="font-semibold text-lg">National Suicide Prevention Helpline</p>
+              <p class="text-xl font-bold">1800-2333-330</p>
+              <p class="text-sm">24/7 confidential support</p>
+            </div>
+            <div>
+              <p class="font-semibold text-lg">AAGVAAN Crisis Helpline</p>
+              <p class="text-xl font-bold">9152987821</p>
+              <p class="text-sm">24/7 emotional support and crisis intervention</p>
+            </div>
+            <div>
+              <p class="font-semibold text-lg">iCall Helpline</p>
+              <p class="text-xl font-bold">9152987821</p>
+              <p class="text-sm">Mental health support and crisis counseling</p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-semibold text-foreground">Janani Wellness Centre Contact</h2>
+          <p>
+            For non-emergency wellness inquiries or to reach our facility:
+          </p>
+          <div class="bg-surface rounded-2xl p-6">
+            <p class="font-semibold text-lg mb-3">Janani Wellness Centre</p>
+            <p class="font-semibold">Direct Line: 6302682285</p>
+            <p>WhatsApp: +916302682285</p>
+            <p>Email: jananiwellness@gmail.com</p>
+            <p>Address: Hayathnagar, Hyderabad, Telangana 501505</p>
+            <p class="mt-4 text-sm italic">Available 24/7 for admission inquiries and support</p>
+          </div>
+
+          <h2 class="text-2xl font-semibold text-foreground">Nearest Hospitals</h2>
+          <p>
+            In case of emergency, proceed to the nearest hospital:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Apollo Hospitals Hyderabad</li>
+            <li>CARE Hospital Hyderabad</li>
+            <li>Continental Hospital Hyderabad</li>
+            <li>Any government hospital in the Hayathnagar area</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Crisis Intervention Guidelines</h2>
+
+          <h3 class="text-xl font-semibold text-foreground">If Someone is in Crisis:</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Stay calm and keep the person safe</li>
+            <li>Remove any dangerous items if possible</li>
+            <li>Call emergency services (108) immediately</li>
+            <li>Stay with the person until help arrives</li>
+            <li>Listen without judgment</li>
+            <li>Do not leave the person alone</li>
+            <li>Do not attempt to handle the situation alone if you feel unsafe</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Medication & Substance Concerns</h2>
+          <p>
+            If someone has overdosed or consumed a harmful substance:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Call emergency services immediately (108)</li>
+            <li>If possible, provide information about what was consumed</li>
+            <li>Do not attempt to induce vomiting</li>
+            <li>Keep the person awake and breathing if possible</li>
+            <li>Have emergency personnel aware of any medical conditions</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Online Resources</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><a href="https://www.aasra.info/" target="_blank" rel="noreferrer" class="text-primary hover:underline">AASRA - Befrienders India</a></li>
+            <li><a href="https://www.thelinepeopleline.org/" target="_blank" rel="noreferrer" class="text-primary hover:underline">The Line - Mental Health Support</a></li>
+            <li><a href="https://www.icallhelpline.org/" target="_blank" rel="noreferrer" class="text-primary hover:underline">iCall - Mental Health Helpline</a></li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Important Disclaimer</h2>
+          <p>
+            This page provides general emergency information only. In any life-threatening situation, do not delay in contacting emergency services. Always prioritize immediate medical care and professional intervention over any other consideration.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">Questions or Concerns?</h2>
+          <p>
+            If you have questions about our facility's emergency procedures or need support resources:
+          </p>
+          <div class="bg-surface rounded-2xl p-6 mt-4">
+            <p class="font-semibold">Contact Janani Wellness Centre</p>
+            <p>Phone: 6302682285</p>
+            <p>WhatsApp: +916302682285</p>
+            <p class="mt-4 text-sm italic">Our team is available 24/7 to assist you</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SiteFooter client:load />
+    <FloatingActions client:load />
+  </div>
+</Layout>

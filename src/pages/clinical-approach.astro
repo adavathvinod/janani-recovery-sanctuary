@@ -1,0 +1,216 @@
+---
+// @ts-nocheck
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/site/SiteHeader';
+import SiteFooter from '@/components/site/SiteFooter';
+import FloatingActions from '@/components/site/FloatingActions';
+---
+
+<Layout
+  title="Clinical Approach | Janani Wellness Centre"
+  description="Learn about Janani's evidence-based clinical methodology, professional approach, and wellness recovery programs."
+  canonicalUrl="/clinical-approach"
+>
+  <div class="min-h-screen bg-background text-foreground">
+    <SiteHeader currentPath="/clinical-approach" client:load />
+
+    <section class="bg-hero">
+      <div class="container py-14 md:py-20">
+        <h1 class="text-4xl md:text-5xl">Our Clinical Approach</h1>
+        <p class="mt-4 max-w-prose text-lg text-muted-foreground">
+          Evidence-based wellness methodology designed for comprehensive recovery support
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 md:py-18">
+      <div class="container max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6">Professional, Evidence-Based Wellness Support</h2>
+        
+        <p class="text-muted-foreground leading-relaxed mb-6">
+          At Janani Wellness Centre, our clinical approach is built on evidence-based practices, professional medical supervision, and compassionate care. We combine proven therapeutic methodologies with a holistic wellness model to support individuals in their recovery journey.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-10 mb-4">Our Core Clinical Principles</h2>
+        
+        <div class="grid gap-6 md:grid-cols-2 mb-8">
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Individualized Assessment</h3>
+            <p class="text-sm text-muted-foreground">
+              Every individual's wellness needs are unique. We conduct comprehensive medical, psychological, and behavioral assessments to develop personalized care plans.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Professional Medical Supervision</h3>
+            <p class="text-sm text-muted-foreground">
+              24/7 medical monitoring and professional oversight ensures safety and appropriate management of the wellness process.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Multi-Disciplinary Team Approach</h3>
+            <p class="text-sm text-muted-foreground">
+              Our team includes doctors, psychologists, counselors, and wellness coaches working collaboratively for comprehensive recovery support.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Structured Routine & Environment</h3>
+            <p class="text-sm text-muted-foreground">
+              A safe, clean, structured environment with daily routines supports stability and positive behavioral change.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-10 mb-4">Evidence-Based Therapeutic Approaches</h2>
+
+        <div class="space-y-4 mb-8">
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Cognitive Behavioral Therapy (CBT)</h3>
+            <p class="text-muted-foreground text-sm">
+              CBT helps individuals identify and modify negative thought patterns and behaviors that contribute to wellness challenges. This evidence-based approach builds practical coping skills and emotional resilience.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Motivational Enhancement Therapy (MET)</h3>
+            <p class="text-muted-foreground text-sm">
+              MET is designed to increase internal motivation for change by exploring ambivalence and strengthening commitment to recovery goals.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Family-Centered Counseling</h3>
+            <p class="text-muted-foreground text-sm">
+              Family involvement is crucial to recovery. We provide family counseling to rebuild relationships, improve communication, and create supportive home environments.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Mindfulness & Wellness Practices</h3>
+            <p class="text-muted-foreground text-sm">
+              Meditation, yoga, and mindfulness practices help reduce stress, build emotional awareness, and support overall wellness and mental health.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Relapse Prevention Training</h3>
+            <p class="text-muted-foreground text-sm">
+              We teach individuals to identify triggers, develop coping strategies, and create action plans for managing challenges long-term.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-10 mb-4">Daily Wellness Routine Structure</h2>
+
+        <p class="text-muted-foreground leading-relaxed mb-6">
+          A structured daily routine provides stability and supports positive behavioral change. Typical daily activities include:
+        </p>
+
+        <div class="rounded-2xl border bg-surface p-6 space-y-3 mb-8">
+          <div class="flex gap-4">
+            <span class="font-semibold text-primary min-w-32">Morning (6:30-8:00 AM)</span>
+            <span class="text-muted-foreground">Wake-up routine, meditation, yoga, and healthy breakfast</span>
+          </div>
+          <div className="border-t border-border/40"></div>
+          <div class="flex gap-4">
+            <span class="font-semibold text-primary min-w-32">Mid-Morning (9:00-12:00 PM)</span>
+            <span class="text-muted-foreground">Individual therapy sessions, medical consultations, group activities</span>
+          </div>
+          <div className="border-t border-border/40"></div>
+          <div class="flex gap-4">
+            <span class="font-semibold text-primary min-w-32">Afternoon (12:30-3:00 PM)</span>
+            <span class="text-muted-foreground">Nutritious lunch, rest, recreational activities, life skills training</span>
+          </div>
+          <div className="border-t border-border/40"></div>
+          <div class="flex gap-4">
+            <span class="font-semibold text-primary min-w-32">Late Afternoon (3:30-6:00 PM)</span>
+            <span class="text-muted-foreground">Group counseling, wellness activities, fitness, creative pursuits</span>
+          </div>
+          <div className="border-t border-border/40"></div>
+          <div class="flex gap-4">
+            <span class="font-semibold text-primary min-w-32">Evening (6:30-8:30 PM)</span>
+            <span class="text-muted-foreground">Dinner, group discussions, leisure time, family video calls</span>
+          </div>
+          <div className="border-t border-border/40"></div>
+          <div class="flex gap-4">
+            <span class="font-semibold text-primary min-w-32">Night (9:00+ PM)</span>
+            <span class="text-muted-foreground">Wind-down activities, sleep routine, rest</span>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-10 mb-4">Medical Management Protocol</h2>
+
+        <div class="space-y-4 mb-8">
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Initial Medical Evaluation</h3>
+            <p class="text-muted-foreground text-sm">
+              Comprehensive physical examination, vital signs monitoring, and medical history assessment to establish baseline health status and identify any contraindications.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Ongoing Medical Monitoring</h3>
+            <p class="text-muted-foreground text-sm">
+              Regular vital signs monitoring, medical consultations, and health assessments throughout the wellness support period.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Nutritional Support</h3>
+            <p class="text-muted-foreground text-sm">
+              In-house kitchen provides nutritious, balanced meals designed to support physical health recovery and overall wellness.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Medication Management (if needed)</h3>
+            <p class="text-muted-foreground text-sm">
+              Supervised medication administration and management when medically appropriate, under professional medical guidance.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-10 mb-4">Aftercare & Continued Support</h2>
+
+        <p class="text-muted-foreground leading-relaxed mb-6">
+          Recovery extends beyond our facility. We provide comprehensive aftercare planning including:
+        </p>
+
+        <ul class="list-disc pl-6 space-y-2 text-muted-foreground mb-8">
+          <li>Detailed aftercare instructions and relapse prevention strategies</li>
+          <li>Ongoing outpatient counseling and therapy options</li>
+          <li>Support group referrals and community resources</li>
+          <li>Regular follow-up appointments and wellness check-ins</li>
+          <li>Family support programs and continued family involvement</li>
+          <li>Life skills and employment support services</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-10 mb-4">Our Commitment to Safety & Efficacy</h2>
+
+        <p class="text-muted-foreground leading-relaxed mb-6">
+          We are committed to evidence-based practices, continuous professional development, and adherence to regulatory standards. Our clinical approach is regularly reviewed and updated based on current research and best practices in behavioral health and wellness support.
+        </p>
+
+        <div class="rounded-3xl border bg-surface p-6 md:p-8 mt-10">
+          <h3 class="text-2xl font-semibold mb-4">Questions About Our Approach?</h3>
+          <p class="text-muted-foreground mb-6">
+            We welcome your inquiries about our clinical methodology and how we can support your wellness journey.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="tel:+916302682285" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-medium text-primary-foreground hover:opacity-90">
+              Call 6302682285
+            </a>
+            <a href="/contact" class="inline-flex items-center justify-center rounded-full border px-6 py-3 font-medium hover:bg-accent/50">
+              Schedule Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SiteFooter client:load />
+    <FloatingActions client:load />
+  </div>
+</Layout>

@@ -1,0 +1,118 @@
+---
+// @ts-nocheck
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/site/SiteHeader';
+import SiteFooter from '@/components/site/SiteFooter';
+import FloatingActions from '@/components/site/FloatingActions';
+---
+
+<Layout
+  title="Medical Disclaimer | Janani Wellness Centre"
+  description="Important medical disclaimer for Janani Wellness Centre. Please read before seeking any services."
+  canonicalUrl="/medical-disclaimer"
+>
+  <div class="min-h-screen bg-background text-foreground">
+    <SiteHeader currentPath="/medical-disclaimer" client:load />
+
+    <section class="bg-hero">
+      <div class="container py-14 md:py-20">
+        <h1 class="text-4xl md:text-5xl">Medical Disclaimer</h1>
+        <p class="mt-4 max-w-prose text-lg text-muted-foreground">
+          Important information about our services and medical guidance
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 md:py-18">
+      <div class="container max-w-4xl">
+        <div class="prose prose-invert max-w-none space-y-6 text-muted-foreground">
+          <div class="rounded-2xl border border-yellow-600/50 bg-yellow-600/10 p-6 mb-6">
+            <p class="font-semibold text-yellow-200 text-lg">IMPORTANT MEDICAL DISCLAIMER</p>
+            <p class="text-sm mt-2">Please read this disclaimer carefully before using our website or services.</p>
+          </div>
+
+          <h2 class="text-2xl font-semibold text-foreground">1. General Medical Disclaimer</h2>
+          <p>
+            The information, content, and materials provided on this website are for informational and educational purposes only and do not constitute professional medical advice, diagnosis, or treatment. Nothing on this website should be interpreted as a substitute for professional medical diagnosis or treatment.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">2. No Doctor-Patient Relationship</h2>
+          <p>
+            The use of this website and any information provided through this website does not establish a doctor-patient relationship. Any wellness support or services provided require a proper medical evaluation and consultation with a qualified medical professional.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">3. Professional Consultation Required</h2>
+          <p>
+            Before seeking any wellness support or services at our facility, individuals should consult with qualified medical professionals to assess their condition, discuss treatment options, and determine the most appropriate course of action for their specific situation.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">4. No Guarantee of Outcomes</h2>
+          <p>
+            We do not make any guarantees or representations regarding the outcome of wellness support or services. Recovery outcomes vary by individual and depend on many factors including personal commitment, medical condition, family support, and other circumstances. Results are not guaranteed and may vary from person to person.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">5. Individual Medical History Matters</h2>
+          <p>
+            Wellness support and services may not be appropriate for all individuals. Medical history, current health conditions, medications, and other factors must be carefully evaluated by qualified medical professionals before admission to our facility.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">6. Emergency Services</h2>
+          <p>
+            In case of a medical emergency, please call emergency services or proceed to the nearest hospital. Do not rely on website information or our facility for emergency treatment. Our facility is designed for structured wellness support, not emergency medical care.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">7. Information Accuracy</h2>
+          <p>
+            While we strive to provide accurate and current information, we do not warrant the accuracy, completeness, or timeliness of any information provided. Medical science and wellness practices evolve, and information may change.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">8. No Liability for Reliance</h2>
+          <p>
+            Janani Wellness Centre shall not be liable for any damages or consequences arising from the use or reliance upon any information provided on this website. Users assume full responsibility for their use of this website and any health decisions made based on information obtained from this website.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">9. Personalized Assessment Required</h2>
+          <p>
+            Each individual's wellness journey is unique. A comprehensive personal assessment by qualified medical professionals is essential before beginning any wellness support program. Our team will conduct a thorough evaluation during the admission process.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">10. Qualified Professional Involvement</h2>
+          <p>
+            Wellness support at our facility is provided by qualified medical professionals, counselors, and therapists. However, the success of wellness support depends significantly on individual engagement, family support, personal commitment, and other individual factors.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">11. Admission & Screening Process</h2>
+          <p>
+            All individuals seeking wellness support at our facility must undergo a comprehensive screening and assessment process. This process is designed to:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Evaluate medical history and current health status</li>
+            <li>Assess appropriateness for our facility's services</li>
+            <li>Identify any contraindications or special considerations</li>
+            <li>Determine the most suitable wellness program</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">12. Confidentiality Notice</h2>
+          <p>
+            While we maintain strict confidentiality policies, certain information may be disclosed as required by law, regulation, or in emergency situations to protect individual safety.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">Contact for Questions</h2>
+          <p>
+            If you have questions about this Medical Disclaimer or our wellness services, please contact us:
+          </p>
+          <div class="bg-surface rounded-2xl p-6 mt-4">
+            <p class="font-semibold">Janani Wellness Centre</p>
+            <p>Phone: 6302682285</p>
+            <p>Email: jananiwellness@gmail.com</p>
+            <p>Address: Hayathnagar, Hyderabad, Telangana 501505</p>
+            <p class="mt-4 text-sm italic">Available 24/7 for inquiries and support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SiteFooter client:load />
+    <FloatingActions client:load />
+  </div>
+</Layout>

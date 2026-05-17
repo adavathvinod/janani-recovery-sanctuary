@@ -1,0 +1,179 @@
+---
+// @ts-nocheck
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/site/SiteHeader';
+import SiteFooter from '@/components/site/SiteFooter';
+import FloatingActions from '@/components/site/FloatingActions';
+---
+
+<Layout
+  title="Admission Policy & Confidentiality | Janani Wellness Centre"
+  description="Learn about our admission process, eligibility criteria, and confidentiality commitments."
+  canonicalUrl="/admission-confidentiality"
+>
+  <div class="min-h-screen bg-background text-foreground">
+    <SiteHeader currentPath="/admission-confidentiality" client:load />
+
+    <section class="bg-hero">
+      <div class="container py-14 md:py-20">
+        <h1 class="text-4xl md:text-5xl">Admission Policy & Confidentiality</h1>
+        <p class="mt-4 max-w-prose text-lg text-muted-foreground">
+          Professional, compassionate, and confidential admission process
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 md:py-18">
+      <div class="container max-w-4xl">
+        <div class="prose prose-invert max-w-none space-y-6 text-muted-foreground">
+          <h2 class="text-2xl font-semibold text-foreground">Our Admission Process</h2>
+          <p>
+            At Janani Wellness Centre, we believe every individual deserves a respectful, dignified, and confidential admission experience. Our process is designed to ensure proper assessment, appropriate placement, and seamless transition into our care.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">Step 1: Initial Inquiry</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Contact us via phone, WhatsApp, email, or in-person</li>
+            <li>Preliminary discussion about your situation and needs</li>
+            <li>Information about our wellness services and facilities</li>
+            <li>Scheduling of comprehensive assessment appointment</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Step 2: Comprehensive Assessment</h2>
+          <p>
+            Our qualified medical professionals will conduct a thorough assessment including:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Detailed personal and medical history review</li>
+            <li>Current health status evaluation</li>
+            <li>Mental health and emotional assessment</li>
+            <li>Family situation and support system evaluation</li>
+            <li>Identification of any special needs or contraindications</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Step 3: Treatment Planning</h2>
+          <p>
+            Based on the comprehensive assessment, our team will:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Develop a personalized wellness plan</li>
+            <li>Explain the plan and process to you and your family</li>
+            <li>Address any questions or concerns</li>
+            <li>Obtain necessary consent and documentation</li>
+            <li>Arrange pre-admission counseling if needed</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Step 4: Admission</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Scheduling of admission date and time</li>
+            <li>Orientation to facility and daily routines</li>
+            <li>Introduction to care team and fellow residents</li>
+            <li>Establishment of house rules and expectations</li>
+            <li>Initial medical evaluation upon arrival</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Eligibility Criteria</h2>
+          <p>
+            Individuals seeking wellness support at our facility should:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Be age 18 or older (or with parental consent if younger)</li>
+            <li>Voluntarily seek wellness support (or through appropriate medical referral)</li>
+            <li>Be medically stable or willing to undergo necessary medical stabilization</li>
+            <li>Be willing to participate in our structured wellness program</li>
+            <li>Have no active medical conditions that contraindicate residential care</li>
+            <li>Be willing to adhere to facility rules and expectations</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Confidentiality Policy</h2>
+          <p>
+            At Janani Wellness Centre, confidentiality is a cornerstone of our services. We are deeply committed to protecting your privacy and personal information.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">What We Keep Confidential</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>All personal health and medical information</li>
+            <li>Mental health and psychological assessments</li>
+            <li>Counseling session contents and disclosures</li>
+            <li>Family history and personal circumstances</li>
+            <li>Wellness progress and treatment outcomes</li>
+            <li>Residence at our facility (at individual request)</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Limited Disclosure Circumstances</h2>
+          <p>
+            We may disclose information only in the following circumstances:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>With explicit written consent from the individual</li>
+            <li>To authorized family members or guardians as agreed by the individual</li>
+            <li>When legally required by court order or law enforcement</li>
+            <li>In case of immediate threat to individual or others' safety</li>
+            <li>To healthcare professionals involved in the individual's care (with consent)</li>
+            <li>To insurance providers for billing purposes (with authorization)</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Confidentiality for Minors</h2>
+          <p>
+            For individuals under 18 years of age, confidentiality is maintained to the extent allowed by law. Parents/guardians are informed of significant health and safety matters, while age-appropriate privacy is respected during the wellness journey.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">Staff Confidentiality Training</h2>
+          <p>
+            All staff members at Janani Wellness Centre:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Receive comprehensive confidentiality training</li>
+            <li>Sign confidentiality agreements</li>
+            <li>Understand HIPAA and applicable privacy regulations</li>
+            <li>Follow strict protocols for information sharing</li>
+            <li>Are accountable for any breaches of confidentiality</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Data Security</h2>
+          <p>
+            We implement multiple security measures to protect your information:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Secure physical storage of medical records</li>
+            <li>Encrypted digital data storage systems</li>
+            <li>Limited access to authorized personnel only</li>
+            <li>Regular security audits and updates</li>
+            <li>Secure disposal of outdated records</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Your Rights</h2>
+          <p>
+            You have the right to:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Access your medical records upon request</li>
+            <li>Request correction of inaccurate information</li>
+            <li>Request restriction of information sharing</li>
+            <li>File a complaint regarding privacy concerns</li>
+            <li>Designate authorized family members to receive information</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-foreground">Confidential Admission Support</h2>
+          <p>
+            We understand the sensitivity and courage it takes to seek wellness support. Our admission process is completely confidential, and we take every step to ensure your privacy and dignity throughout your wellness journey.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-foreground">Contact & Support</h2>
+          <div class="bg-surface rounded-2xl p-6 mt-4">
+            <p class="font-semibold text-lg mb-3">For Admission or Confidentiality Questions</p>
+            <p class="font-semibold">Janani Wellness Centre</p>
+            <p>Phone: 6302682285</p>
+            <p>WhatsApp: +916302682285</p>
+            <p>Email: jananiwellness@gmail.com</p>
+            <p>Address: Hayathnagar, Hyderabad, Telangana 501505</p>
+            <p class="mt-4 text-sm italic font-semibold text-green-400">Available 24/7 • Confidential • Professional • Compassionate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SiteFooter client:load />
+    <FloatingActions client:load />
+  </div>
+</Layout>

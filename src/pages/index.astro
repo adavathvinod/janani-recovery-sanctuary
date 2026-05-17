@@ -5,23 +5,31 @@ import SiteHeader from '@/components/site/SiteHeader';
 import SiteFooter from '@/components/site/SiteFooter';
 import FloatingActions from '@/components/site/FloatingActions';
 import { getCompleteHomeSchema } from '@/lib/structured-data';
+import heroImage1 from '@/assets/janani/hero image.jpg';
+import heroImage2 from '@/assets/janani/hero image2.jpg';
+import heroImage3 from '@/assets/janani/hero image3.jpg';
+import section1Image from '@/assets/janani/section1.jpg';
 
 const homeFaqs = [
   {
-    question: "What is Janani Rehabilitation Centre?",
-    answer: "Janani Alcohol & Drug Rehabilitation Centre is a professional addiction treatment facility in Hyderabad, Telangana, offering comprehensive care including detoxification, counseling, therapy, and holistic support for recovery."
+    question: "What is Janani Wellness Centre?",
+    answer: "Janani is a professional wellness and support sanctuary in Hyderabad, Telangana, dedicated to helping individuals and families through structured care and compassionate support. We provide evidence-based treatment, professional care planning, and therapeutic support within a safe, peaceful environment."
   },
   {
-    question: "What treatments does Janani offer?",
-    answer: "We offer alcohol detoxification, drug rehabilitation, individual and group counseling, structured therapy programs, and wellness support designed to support long-term recovery."
+    question: "What wellness programs does Janani offer?",
+    answer: "We offer comprehensive wellness programs including structured professional care, individual and group counseling, evidence-based therapy programs, wellness activities, family support sessions, and ongoing support strategies to help you build a healthier lifestyle."
   },
   {
     question: "Where is Janani located?",
-    answer: "Janani is located in Hayathnagar, Hyderabad, Telangana. We serve patients from Hyderabad, Hayathnagar, LB Nagar, Dilsukhnagar, Miryalaguda, Suryapet, Khammam, Nalgonda, and all of Telangana."
+    answer: "Janani is located in Hayathnagar, Hyderabad, Telangana. We serve individuals and families from Hyderabad, Hayathnagar, LB Nagar, Dilsukhnagar, Miryalaguda, Suryapet, Khammam, Nalgonda, and all of Telangana. Available 24/7 for admissions and support."
   },
   {
-    question: "How can I contact Janani for admissions?",
-    answer: "You can reach us at 6302682285, via WhatsApp at +916302682285, or email jananirehabilition@gmail.com. We offer fast response times for all enquiries."
+    question: "How can I contact Janani for admissions or enquiries?",
+    answer: "You can reach us at 6302682285, via WhatsApp at +916302682285, or email jananiwellness@gmail.com. We offer confidential, prompt responses 24/7 for admissions, enquiries, and support."
+  },
+  {
+    question: "What makes Janani different?",
+    answer: "At Janani, we provide structured, professional care in a compassionate environment. Our approach combines evidence-based therapy, professional support planning, peaceful surroundings, family involvement, and personalized care. We focus on your dignity, confidentiality, and building sustainable wellness practices."
   }
 ];
 
@@ -57,6 +65,23 @@ const siteNavigationSchema = {
   ]
 };
 
+const heroSlides = [
+  {
+    heading: "Professional Wellness Support in Hyderabad",
+    subheading: "Professional support in a safe, structured, and compassionate environment.",
+    description: "Professional wellness therapy, healthy routines, structured support, and 24/7 professional care tailored to individual wellness needs.",
+    button: "Learn More",
+    image: heroImage1.src
+  },
+  {
+    heading: "Building Healthier Futures",
+    subheading: "Compassionate wellness support for individuals seeking structured care and long-term well-being.",
+    description: "We help individuals develop healthier routines, emotional balance, and long-term wellness through structured professional support.",
+    button: "Talk to Us",
+    image: heroImage2.src
+  }
+];
+
 const baseSchema = getCompleteHomeSchema();
 const structuredData = {
   "@context": "https://schema.org",
@@ -69,262 +94,269 @@ const structuredData = {
 ---
 
 <Layout
-  title="Janani Rehabilitation Centre | Best De-Addiction Centre in Hyderabad, Telangana"
-  description="Janani Alcohol & Drug Rehabilitation Centre offers professional addiction treatment, detox, counseling & therapy in Hyderabad. Serving Hayathnagar, LB Nagar, Dilsukhnagar & all Telangana. Call 6302682285."
-  keywords="rehabilitation centre hyderabad, de-addiction centre telangana, alcohol rehabilitation, drug rehabilitation, addiction treatment hyderabad"
+  title="Janani Wellness Centre Hyderabad | Professional Wellness Support"
+  description="Janani Wellness Centre in Hyderabad provides structured wellness support, counseling, wellness programs, healthy routines, and professional care in a safe and supportive environment."
+  keywords="wellness centre hyderabad, professional support telangana, wellness programs, counseling therapy hyderabad, behavioral wellness"
   canonicalUrl="/"
   structuredData={structuredData}
 >
   <div class="min-h-screen bg-background text-foreground">
     <SiteHeader currentPath="/" client:load />
 
-    <!-- Hero Section -->
-    <section class="bg-hero">
-      <div class="container grid gap-10 py-14 md:grid-cols-12 md:items-center md:py-20">
-        <div class="md:col-span-6">
-          <p class="inline-flex items-center gap-2 rounded-full border bg-background/70 px-3 py-1 text-xs font-medium text-muted-foreground shadow-soft">
-            Hyderabad • Premium Recovery & Healing
-          </p>
-          <h1 class="mt-5 text-4xl leading-[1.05] md:text-6xl">A New Beginning, A Better Life.</h1>
-          <p class="mt-4 max-w-prose text-lg text-muted-foreground md:text-xl">
-            Hyderabad's Premier Sanctuary for Recovery & Healing.
-          </p>
+    <!-- Hero Carousel Section -->
+    <section class="relative w-full overflow-hidden" style="background: linear-gradient(to right, #237b85 0%, #1a5f6f 50%, #0d4d5c 100%);">
+      <div class="hero-carousel relative h-[420px] md:h-[480px] lg:h-[550px]" id="heroCarousel">
+        {heroSlides.map((slide, index) => (
+          <div
+            class="hero-slide absolute inset-0 transition-opacity duration-700"
+            data-slide={index}
+            style={`opacity: ${index === 0 ? '1' : '0'}; pointer-events: ${index === 0 ? 'auto' : 'none'};`}
+          >
+            <div class="absolute inset-0 z-10" style="background: linear-gradient(to right, rgba(35, 123, 133, 0.95) 0%, rgba(26, 95, 111, 0.90) 50%, transparent 100%);"></div>
 
-          <div class="mt-7 flex flex-wrap items-center gap-3">
-            <a href="tel:+916302682285" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
-              Call Now
-            </a>
-            <a href="https://wa.me/916302682285" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full border border-primary px-6 py-3 text-sm font-medium text-primary hover:bg-primary/10 transition-colors">
-              WhatsApp
-            </a>
-            <a href="/treatments" class="inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-medium hover:bg-accent/50 transition-colors">
-              Explore Treatments
-            </a>
-          </div>
-
-          <div class="mt-8 grid gap-4 rounded-2xl border bg-background/70 p-5 shadow-soft md:grid-cols-3">
-            <div>
-              <div class="text-sm font-semibold">Discreet care</div>
-              <div class="text-xs text-muted-foreground">Professional, respectful & confidential.</div>
-            </div>
-            <div>
-              <div class="text-sm font-semibold">Structured routine</div>
-              <div class="text-xs text-muted-foreground">Stability that supports long-term recovery.</div>
-            </div>
-            <div>
-              <div class="text-sm font-semibold">Trusted environment</div>
-              <div class="text-xs text-muted-foreground">Safety-first, calming, clean spaces.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="md:col-span-6">
-          <div class="photo-frame photo-cinematic">
             <img
-              src="/images/reception-2-hd.jpg"
-              alt="Janani rehabilitation centre reception area"
-              class="img-premium photo-hover aspect-[4/3] w-full object-cover"
-              loading="eager"
+              src={slide.image}
+              alt={slide.heading}
+              class="absolute inset-0 w-full h-full object-cover"
             />
-            <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent"></div>
-            <div class="absolute bottom-4 left-4 right-4 rounded-2xl border bg-background/75 p-4 shadow-soft backdrop-blur">
-              <div class="flex items-center justify-between gap-3">
-                <div>
-                  <div class="text-sm font-semibold">Admissions & Enquiry</div>
-                  <div class="text-xs text-muted-foreground">Call 6302682285 • Fast response</div>
+
+            <div class="relative z-20 container h-full flex items-center py-3 md:py-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12 w-full">
+                <div class="flex flex-col justify-center pr-2 md:pr-0">
+                  <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-2 md:mb-4">
+                    {slide.heading}
+                  </h1>
+                  <p class="text-sm sm:text-base md:text-xl text-cyan-200 font-light mb-2 md:mb-3">
+                    {slide.subheading}
+                  </p>
+                  <p class="text-xs sm:text-sm md:text-lg text-gray-200 mb-4 md:mb-8 max-w-lg line-clamp-3 md:line-clamp-none">
+                    {slide.description}
+                  </p>
+                  <div class="flex gap-2 md:gap-3 flex-wrap">
+                    <a href="/treatments" class="inline-flex items-center justify-center px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-full border-2 border-yellow-400 text-yellow-400 font-semibold text-xs sm:text-sm md:text-base hover:bg-yellow-400 hover:text-teal-700 transition-all whitespace-nowrap">
+                      {slide.button}
+                    </a>
+                    <a href="tel:+916302682285" class="inline-flex items-center justify-center px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-full bg-white text-teal-700 font-semibold text-xs sm:text-sm md:text-base hover:bg-gray-100 transition-all whitespace-nowrap">
+                      Call Now
+                    </a>
+                  </div>
                 </div>
-                <div class="hidden sm:block">
-                  <a href="tel:+916302682285" class="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90">
-                    Call
-                  </a>
+
+                <div class="hidden md:block relative h-full">
+                  <div class="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl">
+                    <img
+                      src={slide.image}
+                      alt={slide.heading}
+                      class="w-full h-full object-cover"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        ))}
+      </div>
+
+      <!-- Carousel Controls -->
+      <div class="absolute bottom-4 md:bottom-8 left-0 right-0 z-30 flex items-center justify-between px-4 md:px-12">
+        <div class="flex items-center gap-3 md:gap-4">
+          <span class="text-white text-sm md:text-lg font-semibold" id="slideCounter">1/2</span>
+          <div class="hidden md:block w-16 h-0.5 bg-gradient-to-r from-yellow-400 to-transparent"></div>
+        </div>
+
+        <div class="flex gap-3 md:gap-6">
+          <button
+            id="prevSlide"
+            class="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 md:border-3 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-teal-700 transition-all flex items-center justify-center shadow-lg"
+            aria-label="Previous slide"
+          >
+            <svg class="w-5 md:w-7 h-5 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+
+          <button
+            id="nextSlide"
+            class="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 md:border-3 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-teal-700 transition-all flex items-center justify-center shadow-lg"
+            aria-label="Next slide"
+          >
+            <svg class="w-5 md:w-7 h-5 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- Trust Badges -->
-    <section class="border-y bg-surface py-8">
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.hero-slide');
+      const totalSlides = slides.length;
+      const slideCounter = document.getElementById('slideCounter');
+      const prevBtn = document.getElementById('prevSlide');
+      const nextBtn = document.getElementById('nextSlide');
+
+      function showSlide(n: number) {
+        slides.forEach((slide, index) => {
+          slide.style.opacity = index === n ? '1' : '0';
+          slide.style.pointerEvents = index === n ? 'auto' : 'none';
+        });
+        slideCounter.textContent = `${n + 1}/${totalSlides}`;
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+
+      // Auto-advance slides every 8 seconds
+      setInterval(nextSlide, 8000);
+    </script>
+
+    <!-- About Section -->
+    <section class="py-16 md:py-24 bg-background">
       <div class="container">
-        <div class="grid gap-4 md:grid-cols-3">
-          <article class="flex items-start gap-4 rounded-2xl border bg-background p-5 shadow-soft">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-accent text-accent-foreground shadow-soft">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            </div>
-            <div>
-              <h2 class="text-base font-semibold text-foreground">24/7 CCTV</h2>
-              <p class="mt-1 text-sm text-muted-foreground">Safety-first environment with continuous monitoring.</p>
-            </div>
-          </article>
-
-          <article class="flex items-start gap-4 rounded-2xl border bg-background p-5 shadow-soft">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-accent text-accent-foreground shadow-soft">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.172l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-            </div>
-            <div>
-              <h2 class="text-base font-semibold text-foreground">Medical Supervision</h2>
-              <p class="mt-1 text-sm text-muted-foreground">Structured care guided by trained professionals.</p>
-            </div>
-          </article>
-
-          <article class="flex items-start gap-4 rounded-2xl border bg-background p-5 shadow-soft">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-accent text-accent-foreground shadow-soft">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-            </div>
-            <div>
-              <h2 class="text-base font-semibold text-foreground">Confidential Support</h2>
-              <p class="mt-1 text-sm text-muted-foreground">Discreet admissions with respectful communication.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Amenities Section -->
-    <section class="py-14 md:py-18">
-      <div class="container">
-        <div class="flex items-end justify-between gap-6">
-          <div>
-            <h2 class="text-3xl md:text-4xl">High-Class Amenities</h2>
-            <p class="mt-2 max-w-prose text-muted-foreground">
-              A tranquil, professional environment designed for comfort, safety and healing.
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 items-center">
+          <!-- Left Content -->
+          <div class="md:col-span-1">
+            <p class="text-xs font-semibold text-primary/80 uppercase tracking-widest mb-3">
+              About Janani
             </p>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-foreground leading-tight mb-8">
+              Professional Wellness Support With <span class="text-primary">Compassion & Care</span>
+            </h2>
+            <a href="/about" class="inline-flex items-center justify-center px-8 py-3 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-all">
+              Explore Programs
+            </a>
           </div>
-          <a href="/gallery" class="hidden md:inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-medium hover:bg-accent/50 transition-colors">
-            View Gallery
+
+          <!-- Right Content -->
+          <div class="md:col-span-2 space-y-6">
+            <p class="text-lg text-muted-foreground leading-relaxed">
+              At Janani Wellness Centre, we provide structured wellness support in a safe, respectful, and peaceful environment. Our approach combines evidence-based therapy, professional guidance, wellness activities, and family involvement to help individuals build healthier routines and long-term well-being.
+            </p>
+
+            <p class="text-lg text-muted-foreground leading-relaxed">
+              We understand that wellness challenges affect individuals emotionally, mentally, physically, and socially. That's why our experienced counselors, therapists, and wellness professionals focus on compassionate support, confidentiality, and personalized care tailored to each person's unique needs.
+            </p>
+
+            <p class="text-lg text-muted-foreground leading-relaxed">
+              Our goal is to create a calm and supportive environment where individuals can regain confidence, emotional balance, and a healthier lifestyle through professional wellness programs and ongoing guidance.
+            </p>
+
+            <!-- Statistics -->
+            <div class="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-border">
+              <div class="text-center">
+                <p class="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Wellness Care</p>
+                <p class="text-sm text-muted-foreground">Therapy & Wellness Practices</p>
+              </div>
+              <div class="text-center">
+                <p class="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Structured Support</p>
+                <p class="text-sm text-muted-foreground">Professional Guidance & Care</p>
+              </div>
+              <div class="text-center">
+                <p class="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Safe & Structured</p>
+                <p class="text-sm text-muted-foreground">Professional Wellness Environment</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Support Section -->
+    <section class="py-16 md:py-24 bg-slate-50 dark:bg-slate-900/20">
+      <div class="container">
+        <!-- Header -->
+        <div class="text-center mb-16">
+          <p class="text-xs font-semibold text-primary/80 uppercase tracking-widest mb-3">
+            What We Provide
+          </p>
+          <h2 class="text-4xl md:text-5xl font-serif font-bold">
+            Professional Wellness Support <span class="text-primary">for Individuals</span>
+          </h2>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div class="rounded-3xl bg-white dark:bg-slate-800 p-8 shadow-soft hover:shadow-lg transition-shadow">
+            <div class="mb-6 w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900/30 dark:to-blue-800/20 flex items-center justify-center">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h-2M10 10h-2M18 9a9 9 0 11-18 0 9 9 0 0118 0zM9 9h.01M15 9h.01"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-foreground mb-3">Compassionate Counseling</h3>
+            <p class="text-muted-foreground">Professional guidance focused on emotional wellness, healthier routines, and long-term well-being.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="rounded-3xl bg-white dark:bg-slate-800 p-8 shadow-soft hover:shadow-lg transition-shadow">
+            <div class="mb-6 w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-100 to-emerald-50 dark:from-emerald-900/30 dark:to-emerald-800/20 flex items-center justify-center">
+              <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-foreground mb-3">Personalized Wellness Plans</h3>
+            <p class="text-muted-foreground">Structured support programs designed around individual needs, goals, and wellness journeys.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="rounded-3xl bg-white dark:bg-slate-800 p-8 shadow-soft hover:shadow-lg transition-shadow">
+            <div class="mb-6 w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-900/30 dark:to-purple-800/20 flex items-center justify-center">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-foreground mb-3">Safe & Confidential Care</h3>
+            <p class="text-muted-foreground">A peaceful, respectful, and private environment designed to support comfort and confidence.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="rounded-3xl bg-white dark:bg-slate-800 p-8 shadow-soft hover:shadow-lg transition-shadow">
+            <div class="mb-6 w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-100 to-amber-50 dark:from-amber-900/30 dark:to-amber-800/20 flex items-center justify-center">
+              <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-foreground mb-3">Ongoing Wellness Support</h3>
+            <p class="text-muted-foreground">Continued guidance, wellness strategies, structured routines, and professional support for long-term well-being.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section - Compassionate Support -->
+    <section class="relative py-20 md:py-32 overflow-hidden">
+      <img
+        src={section1Image.src}
+        alt="Compassionate wellness support"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-teal-900/85 via-teal-800/80 to-teal-700/75"></div>
+
+      <div class="container relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+            Compassionate Support Starts Here
+          </h2>
+
+          <p class="text-lg md:text-xl text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto">
+            At Janani Wellness Centre, we provide a safe, structured, and supportive environment focused on professional wellness care, emotional well-being, healthier routines, and long-term wellness for individuals seeking structured support.
+          </p>
+
+          <a href="/contact" class="inline-flex items-center justify-center px-10 py-4 rounded-full border-2 border-yellow-400 text-yellow-400 font-semibold text-lg hover:bg-yellow-400 hover:text-teal-700 transition-all shadow-lg hover:shadow-xl">
+            Talk to Our Team
           </a>
-        </div>
-
-        <div class="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          <article class="group rounded-2xl border bg-card p-5 shadow-soft transition-transform hover:-translate-y-0.5">
-            <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl border bg-accent text-accent-foreground shadow-soft">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9m-9 16l4-4m0 0l4 4m-4-4v4"></path></svg>
-            </div>
-            <h3 class="mt-4 text-lg">Luxury Living</h3>
-            <p class="mt-1 text-sm text-muted-foreground">Premium high-class beds and spacious rooms.</p>
-          </article>
-
-          <article class="group rounded-2xl border bg-card p-5 shadow-soft transition-transform hover:-translate-y-0.5">
-            <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl border bg-accent text-accent-foreground shadow-soft">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
-            </div>
-            <h3 class="mt-4 text-lg">Nutrition</h3>
-            <p class="mt-1 text-sm text-muted-foreground">In-house kitchen providing healthy, balanced meals.</p>
-          </article>
-
-          <article class="group rounded-2xl border bg-card p-5 shadow-soft transition-transform hover:-translate-y-0.5">
-            <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl border bg-accent text-accent-foreground shadow-soft">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            </div>
-            <h3 class="mt-4 text-lg">Safety</h3>
-            <p class="mt-1 text-sm text-muted-foreground">24/7 CCTV surveillance for a secure environment.</p>
-          </article>
-
-          <article class="group rounded-2xl border bg-card p-5 shadow-soft transition-transform hover:-translate-y-0.5">
-            <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl border bg-accent text-accent-foreground shadow-soft">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            </div>
-            <h3 class="mt-4 text-lg">Recreation</h3>
-            <p class="mt-1 text-sm text-muted-foreground">Large open/free space for meditation and movement.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Preview -->
-    <section class="py-14 md:py-18 border-t">
-      <div class="container">
-        <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
-          <div class="lg:col-span-7">
-            <div class="photo-frame photo-cinematic">
-              <img src="/images/beds-1-hd.jpg" alt="Spacious accommodation with premium beds" class="img-premium photo-hover aspect-[4/3] w-full object-cover" loading="lazy" />
-            </div>
-          </div>
-          <div class="lg:col-span-5">
-            <div class="grid gap-4">
-              <div class="photo-frame photo-cinematic shadow-soft">
-                <img src="/images/cctv-room-hd.jpg" alt="Security monitoring and CCTV safety" class="img-premium photo-hover aspect-[4/3] w-full object-cover" loading="lazy" />
-              </div>
-              <div class="photo-frame photo-cinematic shadow-soft">
-                <img src="/images/buddha-wall-hd.jpg" alt="Meditation and wellness ambience" class="img-premium photo-hover aspect-[4/3] w-full object-cover" loading="lazy" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="py-14 md:py-18">
-      <div class="container">
-        <div class="flex items-end justify-between gap-6">
-          <div>
-            <h2 class="text-3xl md:text-4xl">Testimonials</h2>
-            <p class="mt-2 max-w-prose text-muted-foreground">
-              Realistic recovery journeys—focused on safety, structure, and support.
-            </p>
-          </div>
-          <a href="/contact" class="hidden md:inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-medium hover:bg-accent/50 transition-colors">
-            Talk to Us
-          </a>
-        </div>
-
-        <div class="mt-8 grid gap-5 lg:grid-cols-3">
-          <figure class="rounded-3xl border bg-card p-6 shadow-soft">
-            <blockquote class="text-sm leading-relaxed text-foreground">"Before: our home was in constant fear and uncertainty. After: we saw stability return — calm routines, respectful counseling, and real hope for the future."</blockquote>
-            <figcaption class="mt-4 text-sm font-semibold text-foreground">Parent of a Patient</figcaption>
-            <p class="mt-1 text-xs text-muted-foreground">Verified enquiry feedback (anonymized).</p>
-          </figure>
-
-          <figure class="rounded-3xl border bg-card p-6 shadow-soft">
-            <blockquote class="text-sm leading-relaxed text-foreground">"Before: I felt stuck and isolated. After: the structured routine, supportive team, and peaceful environment helped me rebuild confidence—one day at a time."</blockquote>
-            <figcaption class="mt-4 text-sm font-semibold text-foreground">Recovered Client</figcaption>
-            <p class="mt-1 text-xs text-muted-foreground">Verified enquiry feedback (anonymized).</p>
-          </figure>
-
-          <figure class="rounded-3xl border bg-card p-6 shadow-soft">
-            <blockquote class="text-sm leading-relaxed text-foreground">"Before: we didn't know where to start. After: clear guidance, confidential support, and fast responses made the process feel safe and manageable."</blockquote>
-            <figcaption class="mt-4 text-sm font-semibold text-foreground">Family Member</figcaption>
-            <p class="mt-1 text-xs text-muted-foreground">Verified enquiry feedback (anonymized).</p>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- Treatment Programs CTA -->
-    <section class="border-t bg-surface py-14 md:py-18">
-      <div class="container">
-        <div class="grid gap-8 md:grid-cols-12 md:items-center">
-          <div class="md:col-span-6">
-            <h2 class="text-3xl md:text-4xl">Treatment Programs</h2>
-            <p class="mt-3 text-muted-foreground">
-              We support recovery through structured care with detox, counseling and therapy programs.
-            </p>
-            <div class="mt-6 flex flex-wrap gap-3">
-              <a href="/treatments" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
-                See Treatments
-              </a>
-              <a href="/contact" class="inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-medium hover:bg-accent/50 transition-colors">
-                Get Directions
-              </a>
-            </div>
-          </div>
-          <div class="md:col-span-6">
-            <div class="rounded-3xl border bg-background p-6 shadow-soft">
-              <h3 class="text-xl">Visit Us</h3>
-              <p class="mt-2 text-sm text-muted-foreground">No.4 Block, 2nd Floor, Plot No.2, Survey No.268, Word, Street No. 7, Hayathnagar_Khalsa, Hyderabad, Telangana 501505</p>
-              <div class="mt-4 flex flex-wrap gap-3">
-                <a href="https://maps.app.goo.gl/cx2M3wCL2MznQouH7" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full border bg-background px-6 py-2 text-sm font-medium hover:bg-accent/50 transition-colors">
-                  Open Google Maps
-                </a>
-                <a href="https://wa.me/916302682285" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full border px-6 py-2 text-sm font-medium hover:bg-accent/50 transition-colors">
-                  WhatsApp Enquiry
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

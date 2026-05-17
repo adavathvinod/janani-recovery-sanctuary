@@ -1,0 +1,176 @@
+---
+// @ts-nocheck
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/site/SiteHeader';
+import SiteFooter from '@/components/site/SiteFooter';
+import FloatingActions from '@/components/site/FloatingActions';
+---
+
+<Layout
+  title="Understanding Wellness Challenges | Janani Wellness Centre"
+  description="Educational information about wellness challenges, the importance of professional support, and how structured care can help. Learn more at Janani Wellness Centre."
+  keywords="wellness education, behavioral health, wellness challenges, professional support, wellness information"
+  canonicalUrl="/understanding-wellness"
+>
+  <div class="min-h-screen bg-background text-foreground">
+    <SiteHeader currentPath="/understanding-wellness" client:load />
+
+    <section class="bg-hero">
+      <div class="container py-14 md:py-20">
+        <h1 class="text-4xl md:text-5xl">Understanding Wellness Challenges</h1>
+        <p class="mt-4 max-w-prose text-lg text-muted-foreground">
+          Educational information about behavioral wellness and professional support
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 md:py-18">
+      <div class="container max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6">What Are Wellness Challenges?</h2>
+
+        <p class="text-muted-foreground leading-relaxed mb-6">
+          Wellness challenges—including substance-related behavioral concerns—are recognized health conditions that affect individuals and their families. These are complex conditions that involve physical, psychological, and social dimensions, and they benefit from professional intervention and structured support.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-10 mb-6">Why Professional Support Matters</h2>
+
+        <div class="space-y-4 mb-8">
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Medical Assessment</h3>
+            <p class="text-sm text-muted-foreground">
+              Professional medical evaluation helps identify underlying health conditions, assess safety concerns, and develop appropriate care plans tailored to individual needs.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Structured Environment</h3>
+            <p class="text-sm text-muted-foreground">
+              A safe, structured environment with clear routines, professional oversight, and peer support can help individuals focus on their wellness journey.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Evidence-Based Treatment</h3>
+            <p class="text-sm text-muted-foreground">
+              Professional wellness support uses proven therapeutic approaches to help individuals develop coping skills, address underlying causes, and build sustainable wellness practices.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Family Involvement</h3>
+            <p class="text-sm text-muted-foreground">
+              Family sessions and involvement help repair relationships, build support systems, and establish healthy family patterns essential for sustainable wellness.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-10 mb-6">Signs Someone May Benefit From Professional Support</h2>
+
+        <div class="rounded-2xl border bg-card p-6 mb-8">
+          <ul class="list-disc pl-6 space-y-2 text-muted-foreground">
+            <li>Difficulty controlling or reducing substance use despite wanting to</li>
+            <li>Continued use despite negative consequences</li>
+            <li>Withdrawal symptoms when not using</li>
+            <li>Neglect of responsibilities, relationships, or health</li>
+            <li>Failed attempts to quit or reduce use independently</li>
+            <li>Increasing tolerance, requiring more to achieve the same effect</li>
+            <li>Legal, financial, or relationship problems related to use</li>
+            <li>Impact on mental health, mood, or emotional stability</li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-10 mb-6">The Role of Structured Wellness Support</h2>
+
+        <p class="text-muted-foreground leading-relaxed mb-6">
+          Structured wellness support in a professional facility offers:
+        </p>
+
+        <div class="grid gap-4 md:grid-cols-2 mb-8">
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">24/7 Professional Oversight</h3>
+            <p class="text-sm text-muted-foreground">
+              Continuous monitoring and professional support ensures safety and appropriate management of the wellness process.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Individualized Wellness Plans</h3>
+            <p class="text-sm text-muted-foreground">
+              Personalized plans address unique needs, circumstances, and goals for each individual.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Peer Support & Community</h3>
+            <p class="text-sm text-muted-foreground">
+              Connection with others on similar wellness journeys provides understanding, accountability, and mutual support.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6">
+            <h3 class="text-lg font-semibold mb-2">Skill Building</h3>
+            <p class="text-sm text-muted-foreground">
+              Evidence-based therapies help develop coping skills, emotional regulation, and strategies for sustainable wellness.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-10 mb-6">Family Impact & Recovery</h2>
+
+        <p class="text-muted-foreground leading-relaxed mb-6">
+          Wellness challenges affect entire families. Professional support includes:
+        </p>
+
+        <div class="space-y-4 mb-8">
+          <div class="rounded-2xl border bg-card p-6">
+            <h3 class="text-lg font-semibold mb-2">Family Education</h3>
+            <p class="text-sm text-muted-foreground">
+              Helping families understand wellness challenges, reducing shame, and teaching healthy communication patterns.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-card p-6">
+            <h3 class="text-lg font-semibold mb-2">Relationship Repair</h3>
+            <p class="text-sm text-muted-foreground">
+              Structured family sessions support healing of relationships damaged by wellness challenges.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-card p-6">
+            <h3 class="text-lg font-semibold mb-2">Long-Term Support</h3>
+            <p class="text-sm text-muted-foreground">
+              Ongoing involvement helps families maintain healthy patterns and provide sustained support beyond the initial treatment period.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-10 mb-6">Taking the First Step</h2>
+
+        <p class="text-muted-foreground leading-relaxed mb-8">
+          Reaching out for professional wellness support is a positive step toward health and stability. If you or a loved one is struggling with wellness challenges, qualified professionals can help assess your situation and discuss appropriate options for support. Every individual's journey is unique, and professional guidance can help you navigate this path with compassion and expertise.
+        </p>
+
+        <div class="rounded-3xl border bg-surface p-6 md:p-8">
+          <h2 class="text-2xl font-semibold mb-4">Ready to Learn More?</h2>
+          <p class="text-muted-foreground mb-6">
+            Speak with our professional team about your wellness journey. We're available 24/7 for confidential discussions and assessments.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="tel:+916302682285" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+              Call Now
+            </a>
+            <a href="/team" class="inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-medium hover:bg-accent/50 transition-colors">
+              Meet Our Team
+            </a>
+            <a href="/contact" class="inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-medium hover:bg-accent/50 transition-colors">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SiteFooter client:load />
+    <FloatingActions client:load />
+  </div>
+</Layout>

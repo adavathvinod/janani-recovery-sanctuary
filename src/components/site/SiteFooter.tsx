@@ -34,7 +34,7 @@ export default function SiteFooter() {
 
       <div className="border-t">
         <div className="container py-5 text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Janani Alcohol & Drug Rehabilitation Centre.
+          © {new Date().getFullYear()} {JANANI.name}. All rights reserved.
         </div>
       </div>
     </footer>

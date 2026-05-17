@@ -1,0 +1,128 @@
+---
+// @ts-nocheck
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/site/SiteHeader';
+import SiteFooter from '@/components/site/SiteFooter';
+import FloatingActions from '@/components/site/FloatingActions';
+---
+
+<Layout
+  title="Our Team | Professional Care Team at Janani Wellness Centre"
+  description="Meet our experienced and qualified team of doctors, therapists, counselors, and wellness professionals at Janani Wellness Centre in Hyderabad."
+  keywords="wellness professionals, therapists, counselors, doctors, qualified team, janani staff"
+  canonicalUrl="/team"
+>
+  <div class="min-h-screen bg-background text-foreground">
+    <SiteHeader currentPath="/team" client:load />
+
+    <section class="bg-hero">
+      <div class="container py-14 md:py-20">
+        <h1 class="text-4xl md:text-5xl">Our Professional Team</h1>
+        <p class="mt-4 max-w-prose text-lg text-muted-foreground">
+          Experienced, qualified professionals dedicated to your wellness journey
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 md:py-18">
+      <div class="container max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6">Experienced Wellness Professionals</h2>
+
+        <p class="text-muted-foreground leading-relaxed mb-8">
+          At Janani Wellness Centre, our team consists of qualified, experienced professionals committed to providing compassionate, evidence-based wellness support. Our multi-disciplinary team includes doctors, mental health professionals, counselors, and wellness specialists working collaboratively to support your well-being.
+        </p>
+
+        <div class="grid gap-6 md:grid-cols-2 mb-12">
+          <div class="rounded-2xl border bg-surface p-6 shadow-soft">
+            <h3 class="text-lg font-semibold mb-3">Medical Professionals</h3>
+            <p class="text-sm text-muted-foreground">
+              Our qualified medical team provides 24/7 professional oversight, comprehensive assessments, and medically informed care planning. Our doctors bring years of experience in wellness support and behavioral health.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6 shadow-soft">
+            <h3 class="text-lg font-semibold mb-3">Mental Health Professionals</h3>
+            <p class="text-sm text-muted-foreground">
+              Our licensed therapists and psychologists are trained in evidence-based therapeutic approaches including CBT, motivational enhancement, and mindfulness-based interventions.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6 shadow-soft">
+            <h3 class="text-lg font-semibold mb-3">Counselors & Therapists</h3>
+            <p class="text-sm text-muted-foreground">
+              Our experienced counselors provide individual and group counseling, family sessions, and ongoing support. They are trained in addiction and behavioral wellness counseling.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-surface p-6 shadow-soft">
+            <h3 class="text-lg font-semibold mb-3">Wellness Specialists</h3>
+            <p class="text-sm text-muted-foreground">
+              Our wellness coordinators facilitate yoga, meditation, fitness activities, and recreational programs designed to support physical and mental wellness.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-10 mb-6">Professional Qualifications</h2>
+
+        <div class="rounded-2xl border bg-surface p-6 mb-8">
+          <h3 class="text-lg font-semibold mb-4">Our Team Includes:</h3>
+          <ul class="list-disc pl-6 space-y-2 text-muted-foreground">
+            <li>MBBS and specialized medical degree holders</li>
+            <li>Licensed counselors with behavioral health certifications</li>
+            <li>Therapists trained in evidence-based therapeutic modalities</li>
+            <li>Professionals with 5-15+ years of wellness support experience</li>
+            <li>Continuing education in latest wellness methodologies</li>
+            <li>Team members trained in crisis management and emergency care</li>
+            <li>Staff trained in confidentiality and patient privacy protocols</li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-10 mb-6">Our Commitment to Excellence</h2>
+
+        <div class="space-y-4">
+          <div class="rounded-2xl border bg-card p-6">
+            <h3 class="text-lg font-semibold mb-2">Professional Standards</h3>
+            <p class="text-sm text-muted-foreground">
+              We maintain high professional standards through ongoing training, adherence to ethical guidelines, and commitment to evidence-based practices in wellness support.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-card p-6">
+            <h3 class="text-lg font-semibold mb-2">Compassionate Care</h3>
+            <p class="text-sm text-muted-foreground">
+              Every team member is committed to treating individuals with dignity, respect, and compassion while maintaining professional boundaries and confidentiality.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border bg-card p-6">
+            <h3 class="text-lg font-semibold mb-2">Collaborative Approach</h3>
+            <p class="text-sm text-muted-foreground">
+              Our team works collaboratively to ensure comprehensive, coordinated wellness support tailored to each individual's unique needs and circumstances.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10 rounded-3xl border bg-surface p-6 md:p-8">
+          <h2 class="text-2xl font-semibold mb-4">Contact Our Team</h2>
+          <p class="text-muted-foreground mb-6">
+            Our team is available 24/7 to answer questions, discuss your wellness needs, and help you get started on your wellness journey.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="tel:+916302682285" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+              Call Now
+            </a>
+            <a href="https://wa.me/916302682285" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full border border-primary px-6 py-3 text-sm font-medium text-primary hover:bg-primary/10 transition-colors">
+              WhatsApp
+            </a>
+            <a href="/contact" class="inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-medium hover:bg-accent/50 transition-colors">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SiteFooter client:load />
+    <FloatingActions client:load />
+  </div>
+</Layout>
