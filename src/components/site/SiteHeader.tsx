@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import { JANANI, links } from "@/lib/janani";
 import { cn } from "@/lib/utils";
 
@@ -18,9 +20,11 @@ interface Props {
 }
 
 export default function SiteHeader({ currentPath = "/" }: Props) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/70">
-      <div className="container flex h-[85px] items-center justify-between gap-4">
+      <div className="container flex h-[70px] md:h-[75px] items-center justify-between gap-4">
         <a
           href="/"
           className="group flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:gap-3"
@@ -28,7 +32,7 @@ export default function SiteHeader({ currentPath = "/" }: Props) {
           <img
             src={logo}
             alt={`${JANANI.name} logo`}
-            className="h-10 w-10 rounded-full shadow-soft shrink-0"
+            className="h-14 w-14 rounded-full shadow-soft shrink-0"
             loading="eager"
           />
           <div className="hidden leading-tight sm:block">
@@ -61,8 +65,45 @@ export default function SiteHeader({ currentPath = "/" }: Props) {
               Call Now
             </a>
           </Button>
+
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-md hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            aria-label="Toggle navigation menu"
+          >
+            {isMenuOpen ? (
+              <X className="w-5 h-5 text-foreground" />
+            ) : (
+              <Menu className="w-5 h-5 text-foreground" />
+            )}
+          </button>
         </div>
       </div>
+
+      {isMenuOpen && (
+        <nav className="md:hidden border-t bg-background/95 backdrop-blur">
+          <div className="container py-4 space-y-1">
+            {navItems.map((item) => {
+              const isActive = currentPath === item.to;
+              return (
+                <a
+                  key={item.to}
+                  href={item.to}
+                  className={cn(
+                    "block rounded-md px-4 py-3 text-sm font-medium transition-colors",
+                    isActive
+                      ? "bg-accent text-foreground"
+                      : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
+                  )}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
+          </div>
+        </nav>
+      )}
     </header>
   );
 }

@@ -35,7 +35,7 @@ export default function FloatingActions() {
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-4 z-50 md:inset-auto md:bottom-auto md:right-5 md:top-1/2 md:-translate-y-1/2">
       {/* Mobile bottom bar */}
-      <div className="pointer-events-auto mx-auto flex w-[min(520px,calc(100%-2rem))] items-center justify-between gap-2 rounded-full border bg-background/80 p-2 shadow-elevated backdrop-blur md:hidden">
+      <div className="pointer-events-auto mx-auto flex w-[min(520px,calc(100%-2rem))] items-center justify-between gap-2 rounded-full border bg-gradient-to-r from-primary/15 to-primary/10 backdrop-blur p-2 shadow-elevated md:hidden">
         {actions.map((a) => (
           <Button
             key={a.label}
